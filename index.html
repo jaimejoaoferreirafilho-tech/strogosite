@@ -112,13 +112,10 @@
     display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:start;
     padding-bottom:0;
   }
-  .hero-logo-side{
-    position:absolute; top:22px; right:22px; z-index:2;
-    padding:0;
-  }
+  .hero-media{display:flex; flex-direction:column; align-items:flex-end; gap:20px;}
   .hero-logo-side img{
     height:100px; width:auto;
-    filter:brightness(0) invert(1) drop-shadow(0 4px 14px rgba(0,0,0,0.55));
+    filter:brightness(0) invert(1);
   }
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -165,6 +162,7 @@
 
   @media (max-width:820px){
     .hero{padding:36px 0 0;}
+    .hero-logo-side img{height:56px;}
     .hero-grid{grid-template-columns:1fr; padding-bottom:48px; gap:28px;}
     .hero-photo{display:none;}
     .hero h1{font-size:clamp(2.1rem, 8vw, 2.6rem);}
@@ -334,11 +332,11 @@
         </div>
       </div>
       <div class="hero-media">
+        <div class="hero-logo-side reveal in">
+          <img src="assets/logo.png" alt="Casa do Estrogonofe">
+        </div>
         <div class="hero-photo">
           <img src="assets/capa.jpg" alt="Pratos de estrogonofe da Casa do Estrogonofe prontos para o delivery">
-          <div class="hero-logo-side reveal in">
-            <img src="assets/logo.png" alt="Casa do Estrogonofe">
-          </div>
         </div>
       </div>
     </div>
