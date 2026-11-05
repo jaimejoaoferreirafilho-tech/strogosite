@@ -27,10 +27,7 @@ function msg(t){$('message').textContent=t;$('message').style.display='block';wi
 function safe(t){return String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function format(s){return s.work_date.split('-').reverse().join('/')+' · '+s.start_time.slice(0,5)+' às '+s.end_time.slice(0,5)+' · intervalo '+s.break_minutes+' min'}
 function acceptanceWhatsappMessage(name,shiftLabel,unit,notes){
- const lines=['Olá, '+(name||'intermitente')+'!','', 'Você acessou nosso Portal de Ofertas Intermitentes e assumiu o compromisso com a oferta abaixo:','', '*'+(shiftLabel||'Oferta confirmada no portal')+'*'];
- if(unit)lines.push('Unidade: '+unit);
- if(notes)lines.push('Observações: '+notes);
- lines.push('', '*CONFIRMAÇÃO DE ACEITE — TRABALHO INTERMITENTE*','', 'Seu aceite foi registrado, formalizando o compromisso assumido. O descumprimento sem justo motivo está sujeito à multa de 50% da remuneração prevista, conforme o art. 452-A, § 4º, da CLT.','', 'Favor confirmar o recebimento desta mensagem.');
+ const lines=['Olá, '+(name||'Ciclano teste')+'!','', 'Você acessou nosso Portal de Ofertas Intermitentes e assumiu o compromisso com a oferta abaixo:', '*'+(shiftLabel||'29/11/2026 · 15:00 às 23:20 · intervalo de 30 minutos')+'*', '*CONFIRMAÇÃO DE ACEITE — TRABALHO INTERMITENTE*','', 'Seu aceite foi registrado, formalizando o compromisso assumido. O descumprimento está sujeito à multa de 50% da remuneração prevista, conforme o art. 452-A, § 4º, da CLT.','', 'Favor confirmar o recebimento desta mensagem.'];
  return lines.join('\\n');
 }
 function isAdmin(){return profile?.role==='admin'}
