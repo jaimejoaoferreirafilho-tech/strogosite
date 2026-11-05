@@ -27,10 +27,10 @@ function msg(t){$('message').textContent=t;$('message').style.display='block';wi
 function safe(t){return String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function format(s){return s.work_date.split('-').reverse().join('/')+' · '+s.start_time.slice(0,5)+' às '+s.end_time.slice(0,5)+' · intervalo '+s.break_minutes+' min'}
 function acceptanceWhatsappMessage(name,shiftLabel,unit,notes){
- const lines=['Olá, '+(name||'intermitente')+'.','', 'CONFIRMAÇÃO DE COMPROMISSO — TRABALHO INTERMITENTE','', 'Você acessou, por iniciativa própria, o Portal de Ofertas da Casa do Estrogonofe e decidiu voluntariamente aceitar e assumir o compromisso de comparecer à demanda disponibilizada pela empresa.','', 'DADOS DA OFERTA ACEITA:', 'Data e jornada: '+(shiftLabel||'conforme oferta confirmada no portal')];
+ const lines=['Olá, '+(name||'intermitente')+'.','', 'CONFIRMAÇÃO DE ACEITE — TRABALHO INTERMITENTE','', 'Você acessou por iniciativa própria nosso Portal de Ofertas e aceitou voluntariamente o compromisso abaixo:', (shiftLabel||'Oferta confirmada no portal')];
  if(unit)lines.push('Unidade: '+unit);
  if(notes)lines.push('Observações: '+notes);
- lines.push('', 'Ao confirmar a oferta no portal, você declarou ter lido e compreendido as condições apresentadas e assumiu o compromisso com a jornada ofertada. A confirmação foi registrada eletronicamente e não pode ser cancelada, alterada ou desfeita unilateralmente pelo portal.','', 'O art. 452-A, § 4º, da CLT prevê, para o descumprimento sem justo motivo de oferta de trabalho aceita, multa de 50% da remuneração que seria devida, a ser paga pela parte que descumprir à outra, observadas as circunstâncias e a legislação aplicável. Essa penalidade não é automática em casos justificados.','', 'Esta mensagem reforça o compromisso já assumido e registrado no portal; não constitui uma nova convocação.','', 'Por gentileza, confirme o recebimento desta mensagem.');
+ lines.push('', 'Seu aceite ficou registrado no portal e não pode ser desfeito unilateralmente pelo sistema. Conforme o art. 452-A, § 4º, da CLT, o descumprimento sem justo motivo pode gerar multa de 50% da remuneração que seria devida, a cargo da parte que descumprir, observada a legislação aplicável.','', 'Por favor, confirme o recebimento desta mensagem.');
  return lines.join('\\n');
 }
 function isAdmin(){return profile?.role==='admin'}
