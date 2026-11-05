@@ -52,7 +52,9 @@ function renderShifts(){
   const remaining=available.reduce((n,s)=>n+Math.max(0,s.vagas-s.taken),0);
   const accepted=offers.reduce((n,s)=>n+Number(s.taken||0),0);
   const cls=remaining>0&&accepted>0?' admin-mixed':accepted>0?' admin-accepted':isAdmin()?(remaining>0?' admin-open':offers.length?' has-other':''):(available.length?' available':offers.length?' has-other':'');
-  const text=isAdmin()?(remaining>0&&accepted>0?remaining+' livre'+(remaining===1?'':'s')+' / '+accepted+' aceita'+(accepted===1?'':'s'):remaining>0?remaining+' livre'+(remaining===1?'':'s'):accepted>0?accepted+' aceita'+(accepted===1?'':'s'):offers.length?offers.length+' oferta'+(offers.length===1?'':'s'):''):(available.length?remaining+' vaga'+(remaining===1?'':'s'):offers.length?offers.length+' oferta'+(offers.length===1?'':'s'):'');
+  const names=offers.flatMap(s=>acceptanceNames.filter(x=>x.shift_id===s.id).map(x=>x.employee_name));
+  const acceptanceText=accepted>0?(names.length?'Aceito: '+names.join(', ')+(accepted>names.length?' +'+(accepted-names.length)+' confirmação(ões)':''):'Aceito: '+accepted+' confirmação(ões)'):'';
+  const text=accepted>0?(acceptanceText+(remaining>0?' · '+remaining+' vaga(s) livre(s)':'')):(remaining>0?remaining+' vaga'+(remaining===1?'':'s')+' disponível'+(remaining===1?'':'is'):offers.length?offers.length+' oferta'+(offers.length===1?'':'s'):'');
   html+='<button type="button" class="calendar-day'+cls+(selectedDay===date?' selected':'')+(date===today?' today':'')+'" data-calendar-date="'+date+'" aria-label="'+day+' de '+safe($('calendarTitle').textContent)+': '+(text||'sem ofertas')+'" aria-pressed="'+(selectedDay===date?'true':'false')+'"><span class="day-number">'+day+'</span><span class="day-count">'+safe(text)+'</span></button>';
  }
  $('calendar').innerHTML=html;
