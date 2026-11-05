@@ -48,7 +48,7 @@ function renderShifts(){
  const daysInMonth=new Date(Date.UTC(year,mm,0)).getUTCDate();
  const offset=monthStart.getUTCDay();
  const grouped=new Map();
- for(const s of shifts){if(s.work_date.startsWith(month)){if(!grouped.has(s.work_date))grouped.set(s.work_date,[]);grouped.get(s.work_date).push(s)}}
+ for(const s of shifts){if(s.status==='aberta'&&s.work_date.startsWith(month)){if(!grouped.has(s.work_date))grouped.set(s.work_date,[]);grouped.get(s.work_date).push(s)}}
  let html=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].map(d=>'<div class="calendar-weekday">'+d+'</div>').join('');
  for(let i=0;i<offset;i++)html+='<div aria-hidden="true"></div>';
  for(let day=1;day<=daysInMonth;day++){
