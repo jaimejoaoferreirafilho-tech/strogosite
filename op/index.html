@@ -9,7 +9,7 @@ body{margin:0;background:#f3eadc;color:#241f1b;font:15px system-ui}header{positi
 <script type="module">
 import{createClient}from 'https://esm.sh/@supabase/supabase-js@2';
 const db=createClient('https://xbpzjvxocnnqefajsnto.supabase.co','sb_publishable_PDAhCRKVtK1gZ0SItLyeMA_R-q6D9vt');
-const $=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;':'&quot;',"'" :'&#39;'}[c])),check=r=>{if(r.error)throw r.error;return r.data},money=n=>Number(n).toLocaleString('pt-BR',{maximumFractionDigits:4}),notice=s=>$('msg').textContent=s;
+const $=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'" :'&#39;'}[c])),check=r=>{if(r.error)throw r.error;return r.data},money=n=>Number(n).toLocaleString('pt-BR',{maximumFractionDigits:4}),notice=s=>$('msg').textContent=s;
 let profile,products=[],suppliers=[],recipes=[],cart=[],orders=[],movements=[],ops=[];
 const options=arr=>arr.map(x=>'<option value="'+esc(x.id)+'">'+esc(x.name)+'</option>').join('');
 const valid=x=>Number.isFinite(Number(x))&&Number(x)>0;
