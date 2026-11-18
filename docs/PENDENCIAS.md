@@ -8,7 +8,7 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Resultado efetivamente verificado**: validação sintática dos scripts e confirmação explícita do usuário: **“Ficou ótimo.”** Não há teste E2E automatizado comprovado.
 - **Deploy funcional conhecido antes da documentação**: Vercel `strogosite`, produção `dpl_D9sBfNJzYb7UbY6KjwvWDACEwkQ2`, estado `READY` consultado em 18/11/2026. **A documentação pode acionar novo deploy; verificar estado novamente.**
 - **Última alteração documental**: criação destes três arquivos em `docs/` em commits sucessivos; verificar os commits mais recentes do `main`.
-- **Próximo passo exato**: validar no navegador as melhorias de compra avulsa do commit `cf1874a` (data em lote e defaults CARGAJOI/JOI/Joinville), depois retomar a validação das listas consolidadas de supermercado e fornecedores; não repetir correções já revertidas.
+- **Próximo passo exato**: validar despacho de carga pela equipe JOI (commit `8e3ed4c`), depois validar no navegador as melhorias de compra avulsa do commit `cf1874a` (data em lote e defaults CARGAJOI/JOI/Joinville), depois retomar a validação das listas consolidadas de supermercado e fornecedores; não repetir correções já revertidas.
 
 ## P0 — Preservação e integridade
 **Situação**: CONTÍNUA. Nas tentativas anteriores, uma mudança de `op/index.html` resultou em tela de acesso sem os dados visíveis; rollback restaurou funcionamento.
@@ -25,6 +25,10 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Próxima ação**: nenhuma para este item; manter como teste de regressão ao modificar sugestões restauradas. Não extrapolar a confirmação para outros itens. **Não excluir registros diretamente do banco sem confirmação e autorização do usuário.**
 - **Prioridade**: alta, salvo nova orientação.
 
+
+## P1 — Validar conclusão e despacho de cargas pela equipe Joinville
+**Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Commit UI `8e3ed4c`, banco com `stock_cargajoi_dispatched`, RPC `stock_cargajoi_dispatch` e filtro na `stock_cargajoi_picking_list`. A conclusão é por destino/data, exige todos os itens marcados e retira os despachados dos afazeres JOI sem alterar recebimentos.
+- **Próxima ação**: equipe JOI marcar todos, clicar Concluir e despachar carga, confirmar que desapareceu mesmo após recarregar, e verificar que a loja destinatária ainda pode receber. Não simular despacho em dados reais.
 
 ## P1 — Validar exclusão individual e em lote na compra avulsa
 **Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Commit `82f298b` corrige a lixeira que antes tentava ignorar uma contagem inexistente e acrescenta Selecionar todos, Desmarcar todos e Excluir selecionados por loja. A exclusão é apenas de rascunhos, não de pedidos confirmados.
