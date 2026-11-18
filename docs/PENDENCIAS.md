@@ -1,4 +1,8 @@
 
+## P2 — Validar eliminação da fresta na navegação congelada
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `417bee6`, `lista-semanal/index.html`. Usuário mostrou conteúdo de compras rolando entre as duas linhas fixas. Corrigidos margem inferior e cálculo de altura da primeira barra, com junção opaca. Próxima ação: verificar rolagem real e ausência de conteúdo visível na junção em desktop e celular.
+
+
 ## P2 — Validar alinhamento final da barra de navegação e cargas
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `1009a50`, `lista-semanal/index.html`. Confirmar que botões Carga estão à direita e na mesma linha de Compras/Cadastros/Movimentações, sem conteúdo rolando visível por trás; testar largura reduzida. A equipe JOI mantém botões próprios.
 
