@@ -1,4 +1,11 @@
 
+### 18/11/2026 — Ajuste de botões das categorias sob menus fixos
+- **Solicitação:** impedir que Selecionar todos / Desmarcar todos fiquem atrás da navegação congelada ao rolar a tela de compras.
+- **Solução:** linha de ações de categoria com posicionamento sticky abaixo dos menus, espaçamento e adaptação responsiva. Sem mudanças em dados ou regras de compras.
+- **Arquivo:** `lista-semanal/index.html`; **commit:** `284750a`.
+- **Teste:** scripts passaram na validação sintática; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL**.
+
+
 ### 18/11/2026 — Origem automática para todas as compras CARGAJOI
 - **Solicitação:** preencher FORNECEDOR JOI e Joinville sem seleção manual, inclusive em sugestões restauradas FLN.
 - **Solução:** defaults automáticos para qualquer item com fornecedor CARGAJOI, campos de origem bloqueados; preservação do destino. Arquivo `lista-semanal/index.html`, commit `74f9444`.
