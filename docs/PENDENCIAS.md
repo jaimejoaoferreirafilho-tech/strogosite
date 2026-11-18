@@ -1,4 +1,8 @@
 
+## P1 — Validar visualmente cinco itens CARGAJOI classificados como estoque Joinville
+**Estado:** BANCO VALIDADO — INTERFACE AGUARDANDO VALIDAÇÃO. Os cinco itens indicados pela usuária foram atualizados e conferidos no Supabase como `ESTOQUE_JOINVILLE`; commit `3303b11` no código. Verificar após atualização da página que contador de classificação cai em cinco, que itens aparecem na seção produção/estoque disponível e continuam nas listas de separação das cargas, sem aparecer em compras externas.
+
+
 ## P1 — Validar classificação automática de produção própria CARGAJOI
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `a4589a7`, `lista-semanal/index.html`. Estrogonofes e Tikka Masala devem desaparecer da tabela de classificação, aparecer em Produção própria de Joinville e continuar nas listas de carga. Verificar novo contador e que itens de compra externa permanecem pendentes quando sem fornecedor específico. Não houve mutação de pedidos.
 
