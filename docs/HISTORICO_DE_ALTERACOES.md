@@ -1,0 +1,86 @@
+# HISTÓRICO DE ALTERAÇÕES — CASA DO ESTROGONOFE
+Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta conversa. **Este registro não substitui os diffs e testes reais.**
+
+## Critérios obrigatórios
+- **VALIDADO PELO USUÁRIO**: usuário confirmou visualmente/funcionalmente o resultado específico; não implica cobertura de testes automatizados.
+- **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**: código e/ou deploy presentes, sem prova de funcionamento em uso.
+- **NÃO RESOLVIDO**: usuário relatou persistência do problema ou tentativa foi revertida.
+- **REVERTIDO**: código voltou a versão anterior.
+- **INVESTIGAR**: não há evidência suficiente para classificar.
+- Commit e deploy `READY` **não comprovam funcionamento**. Registrar data, causa, arquivo, teste e eventual efeito colateral. Nunca inventar datas ou testes ausentes.
+
+## Alterações verificadas no histórico recente
+
+### 18/11/2026 — Separar produtos acabados nos recebimentos CARGAJOI
+- **Solicitação**: dentro do mesmo pedido, separar seis produtos (cinco estrogonofes e Tikka Masala) dos demais ingredientes, com cabeçalhos.
+- **Causa**: `renderOrders()` em `op/index.html` renderizava todos os itens misturados; tentativas anteriores alteraram tela errada ou quebraram a sintaxe.
+- **Solução**: ordenar itens CARGAJOI e inserir cabeçalhos na própria renderização de recebimentos; manter campos e confirmação do pedido.
+- **Arquivo**: `op/index.html`.
+- **Commit**: [5f09c21](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/5f09c21be85d15486e6bb5222075afd72310995e).
+- **Teste**: scripts da página passaram por verificação sintática na sessão; usuário respondeu **“Ficou ótimo”** após visualizar o resultado.
+- **Estado**: **VALIDADO PELO USUÁRIO** para organização visual mostrada. Sem prova de E2E automatizado.
+- **Risco**: conferir novos pedidos, todos os destinos, outros fornecedores e recebimento parcial.
+
+### 17/11/2026 — Tentativas malsucedidas em recebimentos
+- **Solicitação**: mesma separação dos estrogonofes.
+- **Problema observado**: itens permaneceram misturados; uma tentativa fez a página mostrar tela de acesso sem informações, segundo relato e captura do usuário.
+- **Causa técnica confirmada em tentativa posterior**: alterações de concatenação HTML/JavaScript em `op/index.html` falharam em validação sintática; em tentativa anterior a tela de acesso foi restaurada após rollback. Não afirmar causa única da tela de login sem logs.
+- **Commits**: [04129e0](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/04129e09fee09aedf50d81ebc17e28fcb522d07a), [f948f89](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/f948f8964f4f779e01529786c834a382338be7bf), [6b3cd04](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/6b3cd04b2568d868b0c23d3855b877526c34626c), [658a141](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/658a14176ee4f623b10e8a3778f9a1c8a55655e7), [4c746d1](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/4c746d1c5dea624dd30a6249b2bccfe3a853ed4f).
+- **Estado histórico**: **NÃO RESOLVIDO/REVERTIDO** até a implementação posterior `5f09c21`.
+- **Lição**: sempre identificar `/op/` como tela de recebimento; testar sintaxe **antes** do commit; manter reversão disponível.
+
+### 17/11/2026 — Exclusão de sugestão BANDEJA ISOPOR RASA de Curitiba
+- **Solicitação**: lixeira deve ignorar sugestão restaurada de pedido cancelado, sem apagar cadastro ou histórico.
+- **Causa identificada**: sugestão restaurada não possui necessariamente contagem de origem, mas rotina antiga de exclusão dependia da contagem.
+- **Solução tentada**: `stock_ignore_restored_item` por ID de item, tabela `stock_restored_suggestion_ignored`, filtro em `purchases()`.
+- **Arquivo**: `lista-semanal/index.html`; Supabase RPC/tabela.
+- **Commit relacionado**: [c196739](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/c19673901e4937d403cdffc32326f125f6c6e069). Outras tentativas de ajuste por ID foram feitas posteriormente.
+- **Banco**: consulta em 18/11/2026 confirmou item de BANDEJA ISOPOR RASA de CWB em pedido `cancelado`, com `ignored=true`; também existe BANDEJA ISOPOR FUNDA em outros pedidos, que não deve ser confundida.
+- **Teste**: persistência de flag confirmada por SQL de leitura. **Não há comprovação de que a lixeira tenha sido testada de ponta a ponta no navegador após a última correção.**
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** do fluxo completo. Histórico anterior de tentativas: **NÃO RESOLVIDO** até confirmação de UI.
+- **Risco**: uma sugestão pode ser reconstituída por outra origem/contagem; não excluir diretamente dados produtivos sem identificar o registro e obter autorização.
+
+### 17/11/2026 — Listas de supermercado e confirmação de compra
+- **Solicitação**: retirar classificação duplicada, manter supermercado e outros fornecedores, agregar Fort/Giassi, botão `Já comprei` para sumir da lista.
+- **Arquivo**: `lista-semanal/index.html`; tabela/RPC `stock_local_purchase_checks`, `stock_local_purchase_checked_ids`, `stock_local_purchase_mark`.
+- **Commits**: [f5476e7](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/f5476e78c690276c474d321e44cbade0033e9153), [7631505](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/763150599702f4f4ff97325c52b0b6146dc15037).
+- **Teste**: arquivos e funções presentes; relatos de seção redundante reaparecendo em tentativas anteriores.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** de consolidação, retirada visual e persistência. Não confundir compra com recebimento/entrada de estoque.
+
+### 17/11/2026 — CARGAJOI separação e checklist
+- **Solicitação**: telas Carga Jaraguá/Curitiba/Floripa com separação pela equipe de Joinville, checklists e data.
+- **Arquivo**: `lista-semanal/index.html`; RPCs `stock_cargajoi_picking_list` e `stock_cargajoi_picking_set`.
+- **Commit relacionado**: [e51f39d](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/e51f39d6404f9ff358afe5a1e3b63d29ebf73d5d), com separação visual de produtos acabados **na tela de carga**, não na de recebimentos.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** de todos os destinos e persistência.
+
+### 17/11/2026 — Checklist de supermercado no celular
+- **Solicitação**: ampliar leitura e área de toque em mobile.
+- **Arquivo**: `lista-semanal/index.html`.
+- **Histórico**: primeiro ajuste de CSS não resolveu, segundo ajuste mudou abertura para painel/tela ampla. A correção foi anunciada, mas não há confirmação posterior explícita de uso satisfatório.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Não presumir sucesso apenas pela presença do código.
+
+### 17/11/2026 — Produtos acabados na compra avulsa CARGAJOI
+- **Solicitação**: disponibilizar ESTROGONOFE DE FRANGO, DEFUMADO, CARNE, MIGNON, TRIFOLATI e TIKKA MASALA.
+- **Mudança relatada**: vínculo de produtos já cadastrados ao fornecedor CARGAJOI no Supabase e prioridade na seleção de compra avulsa.
+- **Arquivo**: `lista-semanal/index.html`; `stock_supplier_products`.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** de compra real e geração da previsão.
+
+### 18/11/2026 — Documentação permanente do projeto
+- **Solicitação**: criar `docs/CONTEXTO_DO_PROJETO.md`, `docs/HISTORICO_DE_ALTERACOES.md`, `docs/PENDENCIAS.md` e protocolo de continuidade.
+- **Arquivos**: somente `docs/*.md`; nenhum arquivo da aplicação, esquema do banco ou configuração de produção alterado para esta tarefa.
+- **Validação**: confirmar os três arquivos lendo-os novamente no GitHub. Commit(s) de criação podem ser separados pela API de conteúdos do GitHub.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** até releitura dos três arquivos.
+
+## Modelo obrigatório para próximos registros
+```md
+### AAAA-MM-DD — Título
+- Solicitação original:
+- Sintoma/causa confirmada (se conhecida):
+- Solução e escopo:
+- Arquivos/tabelas alterados:
+- Commit e deploy:
+- Testes executados (separar sintaxe, banco, E2E e confirmação do usuário):
+- Resultado observado:
+- Estado: VALIDADO PELO USUÁRIO | IMPLEMENTADO — AGUARDANDO VALIDAÇÃO | NÃO RESOLVIDO | REVERTIDO | INVESTIGAR
+- Possíveis impactos e próximo passo:
+```
