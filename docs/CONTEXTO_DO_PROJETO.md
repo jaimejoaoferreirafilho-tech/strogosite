@@ -1,4 +1,7 @@
 
+**[REGRA/CÓDIGO — 18/11/2026]** Na seção Compras sugeridas pelas lojas, o botão `Excluir selecionados` ignora em lote as sugestões marcadas, respeitando filtro de loja. Usa RPC `stock_ignore_restored_item` para recuperadas e `stock_ignore_purchase_suggestion` para contagens, com confirmação, processamento individual e relatório de falhas. Não apaga cadastros, pedidos confirmados nem estoque. Commit `626a68c`; validação funcional pendente.
+
+
 **[REGRA/CÓDIGO — 18/11/2026]** Após envio confirmado de contagem semanal (`stock_counts.status='enviado'`), o login da loja deve ocultar a lista preenchida e os botões de edição, exibindo confirmação clara de sucesso, inclusive após recarregar. Isso é somente apresentação: contagem e itens permanecem preservados no Supabase para histórico e sugestões de compra. Commit `5a2190a`; validação de interface pendente.
 
 
