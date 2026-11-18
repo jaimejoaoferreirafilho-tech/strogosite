@@ -1,3 +1,7 @@
+
+## P0 — Validar reenvio de compras após desfazer recebimento FLN
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO. Erro exibido: `Compra sugerida sem contagem válida`. A função `stock_approve_suggested_purchases` exige contagem válida, mas pedidos cancelados podem conter itens com `canceled_source_count_id` e `source_count_id` nulos (comprovado em FLN, produtos acabados). Ajustado o envio destes itens restaurados como compra sem contagem (`ad_hoc=true` apenas na chamada RPC), preservadas quantidades editadas e suprimida reapresentação quando já houver compra ativa para mesmo produto/loja. **Commits:** `f9108b1`, `9c59dc1`; arquivo `lista-semanal/index.html`. Scripts validados sintaticamente; nenhum pedido/estoque foi alterado nesta intervenção. **Próxima ação:** confirmar deploy, reenviar uma única vez, verificar em OP/Recebimentos e confirmar que não há duplicidade. Se persistir, coletar mensagem e inspecionar registros antes de nova tentativa.
+
 # PENDÊNCIAS E ESTADO ATUAL — CASA DO ESTROGONOFE
 Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos chats.
 
