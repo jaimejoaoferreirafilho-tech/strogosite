@@ -77,8 +77,8 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Causa comprovada no código**: `purchases()` consultava `stock_purchase_order_items` sem selecionar a coluna `id`, mas o filtro `ignoredRestored.has(it.id)` dependia dela. Logo, a sugestão cancelada ignorada continuava sendo reconstituída na interface.
 - **Solução**: incluir `id` no `select` de `priorItems` em `lista-semanal/index.html`, sem mudar dados nem RPCs.
 - **Commit**: [510d072](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/510d072774d4c6bcee54f7a64db97dfc693aba79).
-- **Testes**: sintaxe dos dois scripts validada; banco já apresentava `ignored=true` para a sugestão de contagem e a restaurada. Teste autenticado de interface **ainda pendente**.
-- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Confirmar após atualização do deploy e recarregamento.
+- **Testes**: sintaxe dos dois scripts validada; banco já apresentava `ignored=true` para a sugestão de contagem e a restaurada. Usuário confirmou em 18/11/2026 que, após a correção e atualização da página, **a BANDEJA ISOPOR RASA saiu da lista**. Teste E2E automatizado não executado.
+- **Estado**: **VALIDADO PELO USUÁRIO** para a retirada da BANDEJA ISOPOR RASA da lista de sugestões de Curitiba. Não extrapolar essa confirmação para todas as sugestões.
 - **Impacto**: corrige a identificação de itens restaurados em todos os pedidos cancelados; preserva dados de compras, histórico e estoque.
 
 ## Modelo obrigatório para próximos registros
