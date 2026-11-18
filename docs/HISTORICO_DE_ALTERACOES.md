@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Eliminar fresta entre as duas barras congeladas
+- **Problema observado:** imagem do usuário mostra itens da lista visíveis no espaço entre navegação principal e subnavegação.
+- **Causa no código:** cálculo da altura da navegação principal somava 14px e mantinha margem inferior, gerando fresta sem fundo opaco; sombra anterior não corrigia a origem.
+- **Correção:** margem inferior zero, cálculo de posição da segunda barra com altura real da primeira, cobertura opaca de 2px nas junções e retirada da sombra de preenchimento artificial.
+- **Arquivo:** `lista-semanal/index.html`; commit `417bee6`.
+- **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Scripts validados sintaticamente; não houve teste autenticado de rolagem.
+
+
 ### 18/11/2026 — Alinhar botões de carga à direita da subnavegação
 - **Solicitação:** colocar Carga Jaraguá/Curitiba/Floripa na mesma altura de Compras/Cadastros/Movimentações, à direita, e impedir conteúdo rolando visível por trás da barra congelada.
 - **Solução:** mover `#cargaButtons` para slot à direita de `#adminSubnav` quando administração; remover sticky independente e tornar o fundo da barra fixa opaco. Login de equipe mantém botões no local original.
