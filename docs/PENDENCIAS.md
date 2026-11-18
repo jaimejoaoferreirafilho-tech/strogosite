@@ -1,4 +1,8 @@
 
+## P1 — Validar confirmação limpa após envio de contagem
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `5a2190a`, `lista-semanal/index.html`. Testar login JAR após contagem enviada: lista e botões não devem aparecer; mensagem de sucesso deve permanecer após recarga. Verificar que admin continua vendo contagem e sugestões sem perda de dados.
+
+
 ## P1 — Validar botões completamente imóveis durante rolagem
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `1eeb68c`, `lista-semanal/index.html`. A gravação mostrou movimento residual do contêiner sticky; alterado para fixed e reservado espaço com `#adminNavPlaceholder`. Testar início e fim da rolagem, distância das linhas e cabeçalho, ausência de sobreposição em desktop e telas menores.
 
