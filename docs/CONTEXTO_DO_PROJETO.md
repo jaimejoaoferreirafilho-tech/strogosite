@@ -1,4 +1,7 @@
 
+**[REGRA/CÓDIGO/BD — 18/11/2026]** Origem `ESTOQUE_JOINVILLE` significa produto já disponível em Joinville, sem nova compra/encomenda, mas ainda incluído na separação CARGAJOI. Campo `stock_purchase_order_items.cargajoi_purchase_source` aceita essa opção; RPC `stock_set_cargajoi_item_source` foi ajustada, mantendo restrição de admin. Tela `lista-semanal/index.html` permite selecionar a origem e exibe no grupo de produção/estoque disponível. Commit `3303b11`.
+
+
 **[REGRA — 18/11/2026]** Os cinco ESTROGONOFES e TIKKA MASALA são produção própria da cozinha Joinville. Nas compras CARGAJOI não devem exigir fornecedor comercial nem entrar em lista de supermercado/encomendas; devem continuar na separação de carga. A interface os identifica pelo cadastro de produto e os apresenta em grupo Produção própria. Commit `a4589a7`; validação funcional pendente.
 
 
