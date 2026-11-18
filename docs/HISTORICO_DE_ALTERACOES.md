@@ -1,4 +1,11 @@
 
+### 18/11/2026 — Recolher lista de contagem após envio confirmado
+- **Solicitação:** após Jaraguá enviar contagem, tela continuava exibindo todos os itens preenchidos e botões desativados, causando impressão de tarefa não concluída.
+- **Solução:** ao carregar contagem com status `enviado`, ocultar área de preenchimento e mostrar confirmação visual; persistência após recarga por leitura do status. Não zerar dados armazenados.
+- **Arquivo:** `lista-semanal/index.html`; commit `5a2190a`.
+- **Teste:** scripts validados sintaticamente; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL** em login de loja.
+
+
 ### 18/11/2026 — Fixar navegação administrativa sem qualquer deslocamento ao rolar
 - **Solicitação:** gravação do usuário mostrou que as duas linhas ainda percorriam pequena distância vertical ao iniciar a rolagem; deseja botões completamente imóveis.
 - **Causa:** contêiner principal continuava `position:sticky`, que se desloca até alcançar o limite de fixação.
