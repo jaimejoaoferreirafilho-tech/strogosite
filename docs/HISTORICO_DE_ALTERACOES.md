@@ -81,6 +81,17 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Estado**: **VALIDADO PELO USUÁRIO** para a retirada da BANDEJA ISOPOR RASA da lista de sugestões de Curitiba. Não extrapolar essa confirmação para todas as sugestões.
 - **Impacto**: corrige a identificação de itens restaurados em todos os pedidos cancelados; preserva dados de compras, histórico e estoque.
 
+
+### 18/11/2026 — Compra avulsa: data em lote e origem de produtos acabados
+- **Solicitação**: escolher uma única data para todos os itens da compra avulsa e evitar repetir CARGAJOI / FORNECEDOR JOI / Joinville para os seis estrogonofes/Tikka Masala.
+- **Causa**: tela não tinha aplicação de data em lote e não preenchia os três campos de origem na inclusão dos produtos acabados.
+- **Solução**: campo de data e botão `Aplicar data a todos` por loja; novos itens usam a data informada; defaults automáticos por nome exato dos seis produtos, buscando fornecedores cadastrados CARGAJOI e Joinville. A loja de destino não é alterada.
+- **Arquivo**: `lista-semanal/index.html`.
+- **Commit**: [cf1874a](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/cf1874af49161f85e4ee0cd2202bcab4ff160800).
+- **Testes**: os dois scripts passaram em validação sintática; sem teste de navegador autenticado ou confirmação do usuário.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**.
+- **Próximo passo**: testar data em lote, preenchimento automático dos três campos, confirmação de compra e preservação da loja de destino.
+
 ## Modelo obrigatório para próximos registros
 ```md
 ### AAAA-MM-DD — Título
