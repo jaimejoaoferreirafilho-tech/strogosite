@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Corrigir sobreposição dos botões de carga
+- **Solicitação:** botões Carga Jaraguá, Carga Curitiba e Carga Floripa estavam atrás da navegação fixa de Compras / Cadastros / Movimentações (print do usuário).
+- **Causa:** a barra de subnavegação fixa sobrepunha a linha de botões de carga durante a rolagem.
+- **Solução:** CSS de posicionamento sticky de `#cargaButtons` abaixo dos menus, com espaçamento e adaptação para telas menores.
+- **Arquivo:** `lista-semanal/index.html`; **commit:** `d02fe77`.
+- **Teste:** scripts sintaticamente válidos; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL**. Nenhum dado operacional alterado.
+
+
 ### 18/11/2026 — Ajuste de botões das categorias sob menus fixos
 - **Solicitação:** impedir que Selecionar todos / Desmarcar todos fiquem atrás da navegação congelada ao rolar a tela de compras.
 - **Solução:** linha de ações de categoria com posicionamento sticky abaixo dos menus, espaçamento e adaptação responsiva. Sem mudanças em dados ou regras de compras.
