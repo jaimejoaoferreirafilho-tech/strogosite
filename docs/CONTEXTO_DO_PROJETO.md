@@ -1,4 +1,7 @@
 
+**[REGRA — 18/11/2026]** Os cinco ESTROGONOFES e TIKKA MASALA são produção própria da cozinha Joinville. Nas compras CARGAJOI não devem exigir fornecedor comercial nem entrar em lista de supermercado/encomendas; devem continuar na separação de carga. A interface os identifica pelo cadastro de produto e os apresenta em grupo Produção própria. Commit `a4589a7`; validação funcional pendente.
+
+
 **[REGRA — 18/11/2026]** CARGAJOI indica transporte/separação, não forma de aquisição. Cada item deve ter origem SUPERMERCADO ou FORNECEDOR_JOINVILLE com fornecedor real; compras de supermercado não exigem identificar Fort/Giassi. As listas de aquisição devem permanecer separadas, e todos os itens seguem na separação da carga. Classificação deve poder variar por compra, preservando padrões de cadastro. Commit `16be314b`, ajuste `b15d95e`. Não atribuir origem a pedidos existentes por suposição.
 
 
