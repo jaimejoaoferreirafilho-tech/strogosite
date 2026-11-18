@@ -72,6 +72,8 @@ Outros caminhos do repositório devem ser inventariados antes de alterações; n
 
 **[CÓDIGO]** Recebimento de pedido utiliza `stock_receive_purchase` e campos de quantidade recebida; confirmações alimentam movimentações de estoque. Histórico de recebimento e diferenças entre previsto e recebido aparecem em `op/index.html`. Não confundir tela de separação de carga em `lista-semanal/` com tela de recebimento em `op/?area=recebimento`.
 
+**[CÓDIGO/BANCO — 18/11/2026]** A equipe JOI pode concluir despacho CARGAJOI por destino (JAR/CWB/FLN) e data prevista, apenas após todos os itens estarem marcados como separados. O botão `Concluir e despachar carga` chama `stock_cargajoi_dispatch`; a tabela `stock_cargajoi_dispatched` registra cada item e o responsável/horário, e `stock_cargajoi_picking_list` deixa de listar itens despachados. A compra e o recebimento no destino não são alterados. Commit de UI `8e3ed4c`; validação autenticada pendente. Itens novos posteriores permanecem disponíveis, mesmo para mesma data.
+
 ### Fichas técnicas, OP e estoque
 **[REGRA]** OPs por receitas, rendimentos previstos e reais, estados planejada/em andamento/finalizada/cancelada; controle de insumos, produtos transformados, embalagens, perdas, rendimento e tempo. Produção deve verificar disponibilidade de estoque antes de baixar insumos; cancelamento deve respeitar reversão de movimentos. Lojas não veem saldos; admin gerencia ajustes manuais com motivo.
 
