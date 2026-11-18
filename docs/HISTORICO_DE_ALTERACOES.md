@@ -92,6 +92,15 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**.
 - **Próximo passo**: testar data em lote, preenchimento automático dos três campos, confirmação de compra e preservação da loja de destino.
 
+### 18/11/2026 — Corrigir exclusão de itens avulsos e seleção em lote
+- **Solicitação**: lixeira não removia itens da compra avulsa cadastrados na loja errada; adicionar seleção geral e exclusão dos selecionados.
+- **Causa**: botão reutilizava RPC de ignorar sugestão de contagem, mas itens avulsos não têm `count_id`.
+- **Solução**: remover itens avulsos apenas do array de rascunho, com confirmação; adicionar Selecionar todos, Desmarcar todos e Excluir selecionados na loja exibida; preservar fluxo de sugestões de contagem.
+- **Arquivo**: `lista-semanal/index.html`.
+- **Commit**: [82f298b](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/82f298b22db78c397e65ad022db151810cd0800e).
+- **Testes**: scripts sintaticamente válidos; sem teste de interface autenticada.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Não altera registros no banco.
+
 ## Modelo obrigatório para próximos registros
 ```md
 ### AAAA-MM-DD — Título
