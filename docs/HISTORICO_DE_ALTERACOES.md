@@ -1,4 +1,11 @@
 
+### 18/11/2026 — Lixeira para sugestões de compras selecionadas
+- **Solicitação:** adicionar botão de lixeira para todos os itens marcados em `Compras sugeridas pelas lojas`.
+- **Solução:** botão `Excluir selecionados` ao lado de seleção geral; confirmação; chamadas RPC de ignorar sugestões por item; relatório de falhas e atualização da lista. Respeita filtro de loja.
+- **Arquivo:** `lista-semanal/index.html`; commit `626a68c`.
+- **Teste:** sintaxe de ambos os scripts validada; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**. Nenhuma sugestão real foi excluída pelo assistente.
+
+
 ### 18/11/2026 — Recolher lista de contagem após envio confirmado
 - **Solicitação:** após Jaraguá enviar contagem, tela continuava exibindo todos os itens preenchidos e botões desativados, causando impressão de tarefa não concluída.
 - **Solução:** ao carregar contagem com status `enviado`, ocultar área de preenchimento e mostrar confirmação visual; persistência após recarga por leitura do status. Não zerar dados armazenados.
