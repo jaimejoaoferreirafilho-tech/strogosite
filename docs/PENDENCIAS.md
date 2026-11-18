@@ -1,4 +1,8 @@
 
+## P1 — Validar botões completamente imóveis durante rolagem
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `1eeb68c`, `lista-semanal/index.html`. A gravação mostrou movimento residual do contêiner sticky; alterado para fixed e reservado espaço com `#adminNavPlaceholder`. Testar início e fim da rolagem, distância das linhas e cabeçalho, ausência de sobreposição em desktop e telas menores.
+
+
 ## P1 — Validar barra unificada sem rolagem independente
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `9126110`, `lista-semanal/index.html`. A segunda linha foi movida para dentro da primeira como filha posicionada absolutamente; ambas compartilham um único contêiner sticky. Conferir que botões permanecem totalmente visíveis, sem sobreposição, sem rolagem relativa e sem conteúdo visível na fresta. Não marcar resolvido antes da confirmação.
 
