@@ -51,6 +51,9 @@ Outros caminhos do repositório devem ser inventariados antes de alterações; n
 
 **[REGRA]** Compras avulsas podem ocorrer sem contagem; fornecedor CARGAJOI usado para abastecer outras lojas. Produtos em cadastros sempre em **MAIÚSCULAS**. Padronizar insumos produtivos em KG conforme fichas técnicas, mas respeitar unidade de compra/embalagem (UN, FD, CX etc.) e conversões efetivamente cadastradas.
 
+
+**[REGRA/CÓDIGO — 18/11/2026]** Na compra avulsa, o administrador pode escolher uma data e aplicar a todos os itens da loja selecionada. Para os seis produtos acabados (ESTROGONOFE DE FRANGO, DEFUMADO, CARNE, MIGNON, TRIFOLATI e TIKKA MASALA), os campos são preenchidos automaticamente com fornecedor CARGAJOI, origem FORNECEDOR JOI e fornecedor de origem Joinville (cadastro de fornecedor), mantendo a loja de destino escolhida. Implementação em `lista-semanal/index.html`, commit `cf1874a`. **[A VERIFICAR]** Funcionamento completo no navegador e confirmação de compra.
+
 ### Listas supermercado e fornecedores
 **[REGRA]** Manter lista consolidada de supermercado e listas por fornecedores de Joinville (ex.: Mercado das Embalagens). Não criar lista geral redundante de Joinville. Buscar itens de compras JOI com fornecedores **Fort** e **Giassi** e agregar produtos idênticos para compra e distribuição, mantendo destino/data. Classificação da origem da CARGAJOI ocorre na confirmação da compra, sem tela duplicada de classificação.
 
