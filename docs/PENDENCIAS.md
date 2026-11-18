@@ -1,4 +1,8 @@
 
+## P0 — Validar redução de pendências após classificar CARGAJOI
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `0d202cc`, `lista-semanal/index.html`. Causa identificada: tabela apresentava todos os pedidos, não só itens sem classificação. Agora deve diminuir ao salvar SUPERMERCADO ou fornecedor real; conferir persistência após recarregar. Dados Supabase antes da correção: 26 genéricos Joinville, 6 supermercado, 1 fornecedor específico. Não classificar automaticamente os 26 restantes.
+
+
 ## P0 — Classificar itens atuais CARGAJOI antes de sair para compras
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO. Commits `16be314b` e `b15d95e`, `lista-semanal/index.html`. Consulta Supabase mostrou 5 itens supermercado e 28 itens FORNECEDOR_JOINVILLE com fornecedor genérico Joinville. Usuário precisa escolher supermercado ou fornecedor real na tabela de classificação dos pedidos atuais; não supor origem. Confirmar listas consolidadas, datas e quantidades; validar comportamento no navegador. Não modificar estoque/recebimentos/despacho.
 
