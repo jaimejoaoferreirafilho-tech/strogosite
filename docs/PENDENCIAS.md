@@ -1,4 +1,8 @@
 
+## P2 — Validar posição dos botões de carga
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `d02fe77`, `lista-semanal/index.html`. Usuário esclareceu por imagem que a sobreposição afeta Carga Jaraguá / Curitiba / Floripa, não os botões de categoria. Verificar desktop e mobile com menus fixos e durante rolagem. Não alterar checklists nem pedidos.
+
+
 ## P2 — Validar posicionamento dos botões de categoria
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `284750a`, `lista-semanal/index.html`. Verificar rolagem na tela de compras com menus fixos, especialmente Selecionar todos / Desmarcar todos em desktop e celular, sem sobreposição. Se houver problema, solicitar print da região afetada antes de alterar outras telas.
 
