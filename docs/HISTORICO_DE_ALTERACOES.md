@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Preservar fornecedor individual após aplicação por categoria
+- **Solicitação:** seletor geral de fornecedor JOI não pode eliminar a possibilidade de escolher outro fornecedor por produto.
+- **Causa no código:** eventos `onchange` individuais eram sobrescritos após a renderização; a aplicação por categoria também alterava apenas valores visuais, sem atualizar a visibilidade do seletor individual.
+- **Correção:** remover sobrescrita e reconstruir cada célula individual via `updateCargaPurchaseCell` após aplicação em massa, preservando edição posterior por item.
+- **Arquivo:** `lista-semanal/index.html`; commit `2e23415`.
+- **Teste:** scripts sintaticamente válidos; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**.
+
+
 ### 18/11/2026 — Seletores de origem e fornecedor CARGAJOI por categoria
 - **Solicitação:** aplicar uma mesma origem CARGAJOI e fornecedor JOI a todos os itens de uma categoria de compras sugeridas.
 - **Solução:** adicionar dois seletores ao lado de fornecedor/data da categoria, sincronizando os campos individuais apenas dos itens CARGAJOI daquela categoria. Não grava no banco antes de confirmar compra.
