@@ -101,6 +101,15 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Testes**: scripts sintaticamente válidos; sem teste de interface autenticada.
 - **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Não altera registros no banco.
 
+### 18/11/2026 — Concluir despacho da carga na equipe Joinville
+- **Solicitação**: botão para concluir carga após despacho e retirá-la dos afazeres da equipe JOI.
+- **Solução**: por destino e data, exigir checklist 100% marcado; confirmar despacho; registrar por item em `stock_cargajoi_dispatched` via RPC `stock_cargajoi_dispatch`; filtrar despachados na RPC `stock_cargajoi_picking_list` sem mudar pedido ou recebimento.
+- **Arquivos**: `lista-semanal/index.html`; banco: tabela nova e duas funções RPC (uma nova e uma atualizada).
+- **Commit UI**: [8e3ed4c](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/8e3ed4ca5226285d39c90501bf9e7692a8e74999).
+- **Testes**: scripts sintaticamente válidos; consultas SQL confirmaram tabela e RPCs, sem despachos executados (`0` registros). **Sem teste autenticado de despacho**.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**.
+- **Riscos/limites**: verificar permissão JOI, conclusão e sumiço do botão, persistência após recarga, e recebimento normal na loja.
+
 ## Modelo obrigatório para próximos registros
 ```md
 ### AAAA-MM-DD — Título
