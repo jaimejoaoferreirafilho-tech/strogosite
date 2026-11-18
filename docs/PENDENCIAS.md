@@ -1,4 +1,8 @@
 
+## P1 — Validar fornecedor individual após seleção geral da categoria
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `2e23415`, `lista-semanal/index.html`. Testar fornecedor geral, depois trocar fornecedor de um único item, confirmando que os outros mantêm o fornecedor geral e que a escolha individual persiste até confirmação da compra.
+
+
 ## P1 — Validar seletores gerais de origem e fornecedor CARGAJOI
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `cfc6782`, `lista-semanal/index.html`. Testar categoria com itens CARGAJOI: selecionar SUPERMERCADO e verificar campos individuais; selecionar fornecedor JOI e verificar origem FORNECEDOR_JOINVILLE; confirmar que outras categorias e fornecedores logísticos não são alterados. Confirmar compra somente após conferir itens.
 
