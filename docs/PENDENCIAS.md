@@ -1,4 +1,8 @@
 
+## P1 — Validar seletores gerais de origem e fornecedor CARGAJOI
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `cfc6782`, `lista-semanal/index.html`. Testar categoria com itens CARGAJOI: selecionar SUPERMERCADO e verificar campos individuais; selecionar fornecedor JOI e verificar origem FORNECEDOR_JOINVILLE; confirmar que outras categorias e fornecedores logísticos não são alterados. Confirmar compra somente após conferir itens.
+
+
 ## P2 — Validar novos produtos na próxima contagem
 **Estado:** BANCO VALIDADO — INTERFACE AGUARDANDO VALIDAÇÃO. VINAGRE e PAPEL HIGIÊNICO cadastrados em UN; PIMENTA DO REINO oculta nas quatro unidades, PIMENTA EM GRÃO preservada. Conferir na próxima lista semanal aberta; contagens já enviadas permanecem imutáveis. Nenhum pedido foi gerado.
 
