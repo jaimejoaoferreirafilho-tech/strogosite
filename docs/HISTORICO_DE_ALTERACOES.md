@@ -1,4 +1,10 @@
 
+### 18/11/2026 — Atualizar portfólio de contagem semanal
+- **Solicitação:** incluir VINAGRE e PAPEL HIGIÊNICO para equipes considerarem nas próximas contagens (UN), e retirar PIMENTA DO REINO porque já há PIMENTA EM GRÃO.
+- **Implementação:** inserir dois produtos ativos e ocultar PIMENTA DO REINO nas quatro unidades via `stock_count_visibility`; preservar cadastro e PIMENTA EM GRÃO. Sem gerar compras.
+- **Teste:** consulta Supabase confirmou produtos ativos e unidades; **BANCO VALIDADO — EXIBIÇÃO NA TELA AGUARDANDO VALIDAÇÃO**.
+
+
 ### 18/11/2026 — Classificar cinco itens já disponíveis em Joinville
 - **Confirmação da usuária:** os cinco itens remanescentes da tela já estão disponíveis em Joinville, sem necessidade de comprar ou encomendar.
 - **Alterações:** incluir `ESTOQUE_JOINVILLE` no CHECK da tabela de itens de compra, na RPC administrativa de classificação e na interface; atualizar somente cinco IDs de itens previstos CARGAJOI, sem modificar quantidades, status, estoque ou recebimentos.
