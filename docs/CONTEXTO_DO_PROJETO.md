@@ -1,4 +1,7 @@
 
+**[CADASTROS — 18/11/2026]** VINAGRE (Mercearia) e PAPEL HIGIÊNICO (Descartáveis) integram a lista semanal de contagem de todas as unidades, ambos em UN, sem pedido de compra imediato. PIMENTA DO REINO foi ocultada das contagens JOI/JAR/FLN/CWB por `stock_count_visibility`, preservando cadastro e histórico; PIMENTA EM GRÃO permanece visível. Alteração direta no Supabase, sem mudança de código.
+
+
 **[REGRA/CÓDIGO/BD — 18/11/2026]** Origem `ESTOQUE_JOINVILLE` significa produto já disponível em Joinville, sem nova compra/encomenda, mas ainda incluído na separação CARGAJOI. Campo `stock_purchase_order_items.cargajoi_purchase_source` aceita essa opção; RPC `stock_set_cargajoi_item_source` foi ajustada, mantendo restrição de admin. Tela `lista-semanal/index.html` permite selecionar a origem e exibe no grupo de produção/estoque disponível. Commit `3303b11`.
 
 
