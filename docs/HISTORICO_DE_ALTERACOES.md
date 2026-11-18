@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Remover produtos fabricados da classificação de fornecedores
+- **Problema:** estrogonofes e Tikka Masala apareciam como pendentes com fornecedor genérico Joinville; Salvar exibia contorno vermelho e exigia fornecedor comercial.
+- **Causa:** filtro de pendências tratava produção própria como compra de fornecedor externo.
+- **Correção:** reconhecer seis produtos acabados como `PRODUCAO_JOINVILLE` na apresentação, excluí-los das pendências e listas de encomendas, e exibir seção de produção própria para separação. Sem alterações no banco.
+- **Arquivo:** `lista-semanal/index.html`; commit `a4589a7`.
+- **Teste:** sintaxe válida; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**.
+
+
 ### 18/11/2026 — Corrigir contador e permanência de itens após classificar CARGAJOI
 - **Problema confirmado:** tabela exibia `allItems` em vez de `unclassified`, portanto itens salvos continuavam aparecendo; contagem visual não refletia os itens restantes.
 - **Banco consultado antes da correção:** 26 itens com fornecedor genérico Joinville, 6 supermercado, 1 com fornecedor real Mercado das Embalagens JOI.
