@@ -1,6 +1,6 @@
 
-## P1 — Validar confirmação limpa após envio de contagem
-**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `5a2190a`, `lista-semanal/index.html`. Testar login JAR após contagem enviada: lista e botões não devem aparecer; mensagem de sucesso deve permanecer após recarga. Verificar que admin continua vendo contagem e sugestões sem perda de dados.
+## Concluído — Confirmação limpa após envio de contagem
+**Estado:** VALIDADO PELO USUÁRIO (aparentemente funcionando em 18/11/2026). Commit `5a2190a`, `lista-semanal/index.html`. Testar login JAR após contagem enviada: lista e botões não devem aparecer; mensagem de sucesso deve permanecer após recarga. Verificar que admin continua vendo contagem e sugestões sem perda de dados.
 
 
 ## P1 — Validar botões completamente imóveis durante rolagem
