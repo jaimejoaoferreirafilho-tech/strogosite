@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Fixar navegação administrativa sem qualquer deslocamento ao rolar
+- **Solicitação:** gravação do usuário mostrou que as duas linhas ainda percorriam pequena distância vertical ao iniciar a rolagem; deseja botões completamente imóveis.
+- **Causa:** contêiner principal continuava `position:sticky`, que se desloca até alcançar o limite de fixação.
+- **Solução:** aplicar `position:fixed` ao bloco administrativo, ancorado imediatamente abaixo do cabeçalho, com placeholder para reservar espaço no fluxo e manter a subnavegação vinculada à primeira linha.
+- **Arquivo:** `lista-semanal/index.html`; commit `1eeb68c`.
+- **Teste:** ambos scripts sintaticamente válidos; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL**. Não altera dados ou regras operacionais.
+
+
 ### 18/11/2026 — Unificar navegação para evitar deslocamento relativo
 - **Problema observado:** usuário confirmou que as duas linhas de botões ainda se sobrepunham e pareciam ter pequena rolagem independente.
 - **Causa estrutural:** navegação principal `sticky` e subnavegação `fixed` com cálculo de posição separado; sucessivas compensações de 14px e pseudo-elementos não resolveram.
