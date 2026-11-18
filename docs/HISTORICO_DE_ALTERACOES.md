@@ -71,6 +71,16 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Validação**: confirmar os três arquivos lendo-os novamente no GitHub. Commit(s) de criação podem ser separados pela API de conteúdos do GitHub.
 - **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** até releitura dos três arquivos.
 
+
+### 18/11/2026 — Corrigir ID ausente na recuperação de sugestões canceladas
+- **Solicitação**: BANDEJA ISOPOR RASA de Curitiba continuava visível após clicar na lixeira, confirmar e atualizar sem cache.
+- **Causa comprovada no código**: `purchases()` consultava `stock_purchase_order_items` sem selecionar a coluna `id`, mas o filtro `ignoredRestored.has(it.id)` dependia dela. Logo, a sugestão cancelada ignorada continuava sendo reconstituída na interface.
+- **Solução**: incluir `id` no `select` de `priorItems` em `lista-semanal/index.html`, sem mudar dados nem RPCs.
+- **Commit**: [510d072](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/510d072774d4c6bcee54f7a64db97dfc693aba79).
+- **Testes**: sintaxe dos dois scripts validada; banco já apresentava `ignored=true` para a sugestão de contagem e a restaurada. Teste autenticado de interface **ainda pendente**.
+- **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Confirmar após atualização do deploy e recarregamento.
+- **Impacto**: corrige a identificação de itens restaurados em todos os pedidos cancelados; preserva dados de compras, histórico e estoque.
+
 ## Modelo obrigatório para próximos registros
 ```md
 ### AAAA-MM-DD — Título
