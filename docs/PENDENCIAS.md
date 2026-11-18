@@ -3,12 +3,12 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 
 ## Estado da sessão e continuidade
 - **Última tarefa solicitada**: implementar memória permanente do projeto no próprio GitHub; não interrompe o desenvolvimento operacional.
-- **Última alteração funcional**: corrigir consulta de sugestões restauradas para incluir `stock_purchase_order_items.id` e respeitar itens ignorados, commit `510d072` (ainda aguardando validação visual). Anteriormente: separar estrogonofes e Tikka Masala no recebimento CARGAJOI, validado pelo usuário.
+- **Última alteração funcional**: corrigir consulta de sugestões restauradas para incluir `stock_purchase_order_items.id` e respeitar itens ignorados, commit `510d072` (**VALIDADO PELO USUÁRIO** em 18/11/2026: item desapareceu da lista de Curitiba). Anteriormente: separar estrogonofes e Tikka Masala no recebimento CARGAJOI, validado pelo usuário.
 - **Arquivo e commit funcional**: `op/index.html`, [5f09c21](https://github.com/jaimejoaoferreirafilho-tech/strogosite/commit/5f09c21be85d15486e6bb5222075afd72310995e).
 - **Resultado efetivamente verificado**: validação sintática dos scripts e confirmação explícita do usuário: **“Ficou ótimo.”** Não há teste E2E automatizado comprovado.
 - **Deploy funcional conhecido antes da documentação**: Vercel `strogosite`, produção `dpl_D9sBfNJzYb7UbY6KjwvWDACEwkQ2`, estado `READY` consultado em 18/11/2026. **A documentação pode acionar novo deploy; verificar estado novamente.**
 - **Última alteração documental**: criação destes três arquivos em `docs/` em commits sucessivos; verificar os commits mais recentes do `main`.
-- **Próximo passo exato**: (1) confirmar os três documentos no GitHub; (2) retomar a prioridade operacional abaixo; (3) não repetir correções já revertidas.
+- **Próximo passo exato**: retomar a validação das listas consolidadas de supermercado e fornecedores (P1), ou a próxima melhoria solicitada pelo usuário; não repetir correções já revertidas.
 
 ## P0 — Preservação e integridade
 **Situação**: CONTÍNUA. Nas tentativas anteriores, uma mudança de `op/index.html` resultou em tela de acesso sem os dados visíveis; rollback restaurou funcionamento.
@@ -17,12 +17,12 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Próxima ação**: mudanças mínimas, revisar diff, validar todos os scripts antes de commit, testar sessão/autenticação, manter rollback. Nunca publicar erro de sintaxe.
 - **Estado**: PROTOCOLO PERMANENTE.
 
-## P1 — Validar a exclusão da sugestão BANDEJA ISOPOR RASA
-**Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** após correção em 18/11/2026, commit `510d072`. O usuário confirmou que antes da correção o item permanecia mesmo após clicar OK e recarregar sem cache. A consulta de itens de pedidos cancelados omitia `id`, inviabilizando `ignoredRestored.has(it.id)`. O `select` agora inclui `id`; scripts passaram na validação sintática, mas a interface publicada ainda precisa ser conferida.
+## CONCLUÍDO — Exclusão da sugestão BANDEJA ISOPOR RASA
+**Situação**: **VALIDADO PELO USUÁRIO** em 18/11/2026 após commit `510d072`: usuário confirmou **“saiu”** ao verificar BANDEJA ISOPOR RASA em Curitiba. Causa: consulta de itens cancelados omitia `id`, inviabilizando `ignoredRestored.has(it.id)`. O `select` agora inclui `id`; scripts passaram na validação sintática. Não houve exclusão de dados ou movimentação de estoque.
 - **Evidência no banco**: em consulta de 18/11/2026, item BANDEJA ISOPOR RASA de Curitiba em pedido cancelado aparece com `ignored=true` na tabela `stock_restored_suggestion_ignored`. Existem itens BANDEJA ISOPOR FUNDA distintos; não os apagar por engano.
 - **Componentes**: `lista-semanal/index.html`, `purchases()`, `stock_purchase_order_items`, `stock_restored_suggestion_ignored`, `stock_ignore_restored_item`, `stock_ignored_restored_suggestions`, `stock_purchase_suggestion_ignored`.
 - **Tentativas**: ignorar por contagem (falhou em sugestões recuperadas), por pedido+produto, por ID de item e marcação direta no banco; o usuário ainda relatou falha visual antes da última verificação.
-- **Próxima ação**: confirmar deploy `READY`, recarregar com Ctrl+Shift+R e verificar se BANDEJA ISOPOR RASA desapareceu. Se persistir, investigar dados de outra origem e execução real no navegador antes de novas alterações. **Não excluir registros diretamente do banco sem confirmação e autorização do usuário.**
+- **Próxima ação**: nenhuma para este item; manter como teste de regressão ao modificar sugestões restauradas. Não extrapolar a confirmação para outros itens. **Não excluir registros diretamente do banco sem confirmação e autorização do usuário.**
 - **Prioridade**: alta, salvo nova orientação.
 
 ## P1 — Testar compras consolidadas de supermercado e fornecedores
