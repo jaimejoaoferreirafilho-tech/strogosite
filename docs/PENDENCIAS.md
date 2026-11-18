@@ -1,4 +1,8 @@
 
+## P1 — Validar classificação automática de produção própria CARGAJOI
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `a4589a7`, `lista-semanal/index.html`. Estrogonofes e Tikka Masala devem desaparecer da tabela de classificação, aparecer em Produção própria de Joinville e continuar nas listas de carga. Verificar novo contador e que itens de compra externa permanecem pendentes quando sem fornecedor específico. Não houve mutação de pedidos.
+
+
 ## P0 — Validar redução de pendências após classificar CARGAJOI
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `0d202cc`, `lista-semanal/index.html`. Causa identificada: tabela apresentava todos os pedidos, não só itens sem classificação. Agora deve diminuir ao salvar SUPERMERCADO ou fornecedor real; conferir persistência após recarregar. Dados Supabase antes da correção: 26 genéricos Joinville, 6 supermercado, 1 fornecedor específico. Não classificar automaticamente os 26 restantes.
 
