@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Separar aquisição de logística CARGAJOI na lista atual
+- **Solicitação:** usuário precisa sair para comprar; diferenciar supermercado e fornecedores sem escolher qual supermercado, preservando separação de cargas.
+- **Verificado no Supabase:** 33 itens CARGAJOI previstos; 5 SUPERMERCADO, 28 FORNECEDOR_JOINVILLE com fornecedor genérico Joinville.
+- **Solução:** remover origem fixa automática, liberar campos de aquisição na compra e mostrar tabela de classificação de pedidos atuais; origem com fornecedor genérico entra como pendência e não como encomenda confiável.
+- **Arquivo:** `lista-semanal/index.html`; commits `16be314b` e `b15d95e`.
+- **Teste:** scripts sintaticamente válidos. **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**. Nenhum pedido foi reclassificado automaticamente.
+
+
 ### 18/11/2026 — Lixeira para sugestões de compras selecionadas
 - **Solicitação:** adicionar botão de lixeira para todos os itens marcados em `Compras sugeridas pelas lojas`.
 - **Solução:** botão `Excluir selecionados` ao lado de seleção geral; confirmação; chamadas RPC de ignorar sugestões por item; relatório de falhas e atualização da lista. Respeita filtro de loja.
