@@ -26,6 +26,10 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Prioridade**: alta, salvo nova orientação.
 
 
+## P1 — Validar exclusão individual e em lote na compra avulsa
+**Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Commit `82f298b` corrige a lixeira que antes tentava ignorar uma contagem inexistente e acrescenta Selecionar todos, Desmarcar todos e Excluir selecionados por loja. A exclusão é apenas de rascunhos, não de pedidos confirmados.
+- **Próxima ação**: testar na tela da loja errada, apagar individualmente e em lote, trocar de loja e verificar que rascunhos de outras lojas não foram apagados. Confirmar publicação Vercel e registrar resultado do usuário.
+
 ## P1 — Validar data em lote e preenchimento automático na compra avulsa
 **Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Em 18/11/2026, commit `cf1874a` adicionou data única aplicável a todos os itens da loja e defaults para os seis produtos acabados (CARGAJOI / FORNECEDOR JOI / Joinville).
 - **Arquivo**: `lista-semanal/index.html`.
