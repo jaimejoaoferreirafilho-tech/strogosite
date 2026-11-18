@@ -1,4 +1,8 @@
 
+## P2 — Validar posicionamento dos botões de categoria
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `284750a`, `lista-semanal/index.html`. Verificar rolagem na tela de compras com menus fixos, especialmente Selecionar todos / Desmarcar todos em desktop e celular, sem sobreposição. Se houver problema, solicitar print da região afetada antes de alterar outras telas.
+
+
 ## P1 — Validar origem automática de todas as compras CARGAJOI
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO. Commit `74f9444`, `lista-semanal/index.html`. Verificar sugestões FLN restauradas e compras avulsas: origem FORNECEDOR JOI, fornecedor Joinville, campos bloqueados, destino preservado e confirmação correta no recebimento. Não há teste autenticado.
 
