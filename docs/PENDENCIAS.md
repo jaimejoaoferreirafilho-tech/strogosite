@@ -1,4 +1,8 @@
 
+## P1 — Validar lixeira em lote das compras sugeridas
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `626a68c`, `lista-semanal/index.html`. Testar selecionar itens de uma loja, clicar Excluir selecionados, confirmar desaparecimento e persistência após atualizar; testar itens restaurados de pedidos cancelados e relatório de falhas. Não alterar compras já confirmadas.
+
+
 ## Concluído — Confirmação limpa após envio de contagem
 **Estado:** VALIDADO PELO USUÁRIO (aparentemente funcionando em 18/11/2026). Commit `5a2190a`, `lista-semanal/index.html`. Testar login JAR após contagem enviada: lista e botões não devem aparecer; mensagem de sucesso deve permanecer após recarga. Verificar que admin continua vendo contagem e sugestões sem perda de dados.
 
