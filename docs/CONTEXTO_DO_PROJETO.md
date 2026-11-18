@@ -1,3 +1,6 @@
+
+**[REGRA — 18/11/2026]** Toda compra com fornecedor CARGAJOI usa obrigatoriamente origem `FORNECEDOR_JOINVILLE` (exibida como FORNECEDOR JOI) e fornecedor de origem cadastrado `JOINVILLE`, inclusive sugestões restauradas. Destino permanece independente. Interface bloqueia esses campos. Commit `74f9444`; validação no navegador pendente.
+
 # CONTEXTO DO PROJETO — CASA DO ESTROGONOFE
 Atualizado em 18/11/2026. Repositório: `jaimejoaoferreirafilho-tech/strogosite`, branch `main`.
 
