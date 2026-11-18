@@ -54,6 +54,8 @@ Outros caminhos do repositório devem ser inventariados antes de alterações; n
 
 **[REGRA/CÓDIGO — 18/11/2026]** Na compra avulsa, o administrador pode escolher uma data e aplicar a todos os itens da loja selecionada. Para os seis produtos acabados (ESTROGONOFE DE FRANGO, DEFUMADO, CARNE, MIGNON, TRIFOLATI e TIKKA MASALA), os campos são preenchidos automaticamente com fornecedor CARGAJOI, origem FORNECEDOR JOI e fornecedor de origem Joinville (cadastro de fornecedor), mantendo a loja de destino escolhida. Implementação em `lista-semanal/index.html`, commit `cf1874a`. **[A VERIFICAR]** Funcionamento completo no navegador e confirmação de compra.
 
+**[REGRA/CÓDIGO — 18/11/2026]** Na compra avulsa, lixeira individual e ação em lote removem apenas itens em preparação da unidade exibida, sem chamadas de exclusão ao banco. Botões Selecionar todos, Desmarcar todos e Excluir selecionados operam sobre itens da loja selecionada. Não afetam pedidos confirmados nem sugestões de contagem. Commit `82f298b`; confirmação em navegador pendente.
+
 ### Listas supermercado e fornecedores
 **[REGRA]** Manter lista consolidada de supermercado e listas por fornecedores de Joinville (ex.: Mercado das Embalagens). Não criar lista geral redundante de Joinville. Buscar itens de compras JOI com fornecedores **Fort** e **Giassi** e agregar produtos idênticos para compra e distribuição, mantendo destino/data. Classificação da origem da CARGAJOI ocorre na confirmação da compra, sem tela duplicada de classificação.
 
