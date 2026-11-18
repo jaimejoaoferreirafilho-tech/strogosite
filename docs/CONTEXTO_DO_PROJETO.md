@@ -1,4 +1,7 @@
 
+**[REGRA — 18/11/2026]** CARGAJOI indica transporte/separação, não forma de aquisição. Cada item deve ter origem SUPERMERCADO ou FORNECEDOR_JOINVILLE com fornecedor real; compras de supermercado não exigem identificar Fort/Giassi. As listas de aquisição devem permanecer separadas, e todos os itens seguem na separação da carga. Classificação deve poder variar por compra, preservando padrões de cadastro. Commit `16be314b`, ajuste `b15d95e`. Não atribuir origem a pedidos existentes por suposição.
+
+
 **[REGRA/CÓDIGO — 18/11/2026]** Na seção Compras sugeridas pelas lojas, o botão `Excluir selecionados` ignora em lote as sugestões marcadas, respeitando filtro de loja. Usa RPC `stock_ignore_restored_item` para recuperadas e `stock_ignore_purchase_suggestion` para contagens, com confirmação, processamento individual e relatório de falhas. Não apaga cadastros, pedidos confirmados nem estoque. Commit `626a68c`; validação funcional pendente.
 
 
