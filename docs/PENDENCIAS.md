@@ -1,4 +1,8 @@
 
+## P2 — Validar novos produtos na próxima contagem
+**Estado:** BANCO VALIDADO — INTERFACE AGUARDANDO VALIDAÇÃO. VINAGRE e PAPEL HIGIÊNICO cadastrados em UN; PIMENTA DO REINO oculta nas quatro unidades, PIMENTA EM GRÃO preservada. Conferir na próxima lista semanal aberta; contagens já enviadas permanecem imutáveis. Nenhum pedido foi gerado.
+
+
 ## P1 — Validar visualmente cinco itens CARGAJOI classificados como estoque Joinville
 **Estado:** BANCO VALIDADO — INTERFACE AGUARDANDO VALIDAÇÃO. Os cinco itens indicados pela usuária foram atualizados e conferidos no Supabase como `ESTOQUE_JOINVILLE`; commit `3303b11` no código. Verificar após atualização da página que contador de classificação cai em cinco, que itens aparecem na seção produção/estoque disponível e continuam nas listas de separação das cargas, sem aparecer em compras externas.
 
