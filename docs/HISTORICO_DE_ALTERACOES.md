@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Classificar cinco itens já disponíveis em Joinville
+- **Confirmação da usuária:** os cinco itens remanescentes da tela já estão disponíveis em Joinville, sem necessidade de comprar ou encomendar.
+- **Alterações:** incluir `ESTOQUE_JOINVILLE` no CHECK da tabela de itens de compra, na RPC administrativa de classificação e na interface; atualizar somente cinco IDs de itens previstos CARGAJOI, sem modificar quantidades, status, estoque ou recebimentos.
+- **Itens:** SAL C/ PIMENTA MOÍDA (FLN 2 UN e JAR 1 UN), SACO VÁCUO ARROZ (JAR 2 MILHEIRO), LOURO (JAR 1 SACO), KRAFT 10KG PERSONALIZADO (JAR 5 FD).
+- **Código:** `lista-semanal/index.html`, commit `3303b11`.
+- **Validação:** SQL confirmou `updated_count=5` e cinco registros com `ESTOQUE_JOINVILLE`; scripts passaram validação de sintaxe. **BANCO VALIDADO — INTERFACE AGUARDANDO VALIDAÇÃO VISUAL**.
+
+
 ### 18/11/2026 — Remover produtos fabricados da classificação de fornecedores
 - **Problema:** estrogonofes e Tikka Masala apareciam como pendentes com fornecedor genérico Joinville; Salvar exibia contorno vermelho e exigia fornecedor comercial.
 - **Causa:** filtro de pendências tratava produção própria como compra de fornecedor externo.
