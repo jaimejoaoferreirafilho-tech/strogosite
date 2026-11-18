@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Unificar navegação para evitar deslocamento relativo
+- **Problema observado:** usuário confirmou que as duas linhas de botões ainda se sobrepunham e pareciam ter pequena rolagem independente.
+- **Causa estrutural:** navegação principal `sticky` e subnavegação `fixed` com cálculo de posição separado; sucessivas compensações de 14px e pseudo-elementos não resolveram.
+- **Correção:** mover `#adminSubnav` para dentro de `.main-area-nav` no login admin e posicioná-lo de forma absoluta em relação ao único contêiner sticky; criar espaço e cobertura opaca. Sem alteração em pedidos/estoque.
+- **Arquivo:** `lista-semanal/index.html`; commit `9126110`.
+- **Testes:** sintaxe JavaScript validada; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL** no navegador.
+
+
 ### 18/11/2026 — Corrigir sobreposição causada pelo ajuste da fresta
 - **Problema:** após commit `417bee6`, o usuário mostrou botões da segunda linha parcialmente encobertos pela primeira.
 - **Causa:** remoção dos 14px no cálculo da altura deslocou a subnavegação para cima, embora a margem superior de 14px da primeira barra continuasse presente.
