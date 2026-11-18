@@ -1,4 +1,8 @@
 
+## P1 — Validar barra unificada sem rolagem independente
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `9126110`, `lista-semanal/index.html`. A segunda linha foi movida para dentro da primeira como filha posicionada absolutamente; ambas compartilham um único contêiner sticky. Conferir que botões permanecem totalmente visíveis, sem sobreposição, sem rolagem relativa e sem conteúdo visível na fresta. Não marcar resolvido antes da confirmação.
+
+
 ## P1 — Validar navegação sem fresta e sem sobreposição
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `fae4876`, `lista-semanal/index.html`. Após `417bee6`, usuário comprovou sobreposição de botões na segunda linha. Restaurado offset de 14px e cobertura opaca da fresta. Verificar rolagem real: duas linhas completamente visíveis e nenhum produto aparecendo entre elas. Não marcar resolvido sem confirmação.
 
