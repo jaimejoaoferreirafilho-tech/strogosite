@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Corrigir sobreposição causada pelo ajuste da fresta
+- **Problema:** após commit `417bee6`, o usuário mostrou botões da segunda linha parcialmente encobertos pela primeira.
+- **Causa:** remoção dos 14px no cálculo da altura deslocou a subnavegação para cima, embora a margem superior de 14px da primeira barra continuasse presente.
+- **Correção:** restaurar os 14px no cálculo e usar fundo opaco de 16px acima da segunda barra para cobrir a fresta, sem mover os botões para baixo do conteúdo.
+- **Arquivo:** `lista-semanal/index.html`; commit `fae4876`.
+- **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Sintaxe validada; sem teste de navegador autenticado.
+
+
 ### 18/11/2026 — Eliminar fresta entre as duas barras congeladas
 - **Problema observado:** imagem do usuário mostra itens da lista visíveis no espaço entre navegação principal e subnavegação.
 - **Causa no código:** cálculo da altura da navegação principal somava 14px e mantinha margem inferior, gerando fresta sem fundo opaco; sombra anterior não corrigia a origem.
