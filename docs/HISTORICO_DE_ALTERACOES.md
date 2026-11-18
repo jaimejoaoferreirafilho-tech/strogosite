@@ -110,6 +110,16 @@ Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta c
 - **Estado**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**.
 - **Riscos/limites**: verificar permissão JOI, conclusão e sumiço do botão, persistência após recarga, e recebimento normal na loja.
 
+
+### 18/11/2026 — Reenvio de compras FLN após cancelamento de recebimento
+- **Problema**: mensagem `Compra sugerida sem contagem válida` ao reenviar produtos restaurados.
+- **Causa verificada**: RPC de aprovação exige `count_id` para compra sugerida; pedidos cancelados FLN continham itens com referências de contagem nulas (inclusive estrogonofes).
+- **Correção**: reenviar item restaurado sem contagem como `ad_hoc` apenas no payload, manter quantidade alterada no rascunho e ocultar item restaurado se houver compra ativa para produto/loja.
+- **Arquivo**: `lista-semanal/index.html`.
+- **Commits**: `f9108b1` e `9c59dc1`.
+- **Testes**: validação sintática dos scripts. Sem teste autenticado de confirmação de compra, sem mutação de pedidos pelo assistente.
+- **Status**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Confirmar envio e presença correta no recebimento sem duplicações.
+
 ## Modelo obrigatório para próximos registros
 ```md
 ### AAAA-MM-DD — Título
