@@ -1,4 +1,8 @@
 
+## P1 — Validar navegação sem fresta e sem sobreposição
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `fae4876`, `lista-semanal/index.html`. Após `417bee6`, usuário comprovou sobreposição de botões na segunda linha. Restaurado offset de 14px e cobertura opaca da fresta. Verificar rolagem real: duas linhas completamente visíveis e nenhum produto aparecendo entre elas. Não marcar resolvido sem confirmação.
+
+
 ## P2 — Validar eliminação da fresta na navegação congelada
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `417bee6`, `lista-semanal/index.html`. Usuário mostrou conteúdo de compras rolando entre as duas linhas fixas. Corrigidos margem inferior e cálculo de altura da primeira barra, com junção opaca. Próxima ação: verificar rolagem real e ausência de conteúdo visível na junção em desktop e celular.
 
