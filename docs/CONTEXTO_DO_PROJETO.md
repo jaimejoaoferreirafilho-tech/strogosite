@@ -1,4 +1,7 @@
 
+**[REGRA/CÓDIGO — 18/11/2026]** Após envio confirmado de contagem semanal (`stock_counts.status='enviado'`), o login da loja deve ocultar a lista preenchida e os botões de edição, exibindo confirmação clara de sucesso, inclusive após recarregar. Isso é somente apresentação: contagem e itens permanecem preservados no Supabase para histórico e sugestões de compra. Commit `5a2190a`; validação de interface pendente.
+
+
 **[REGRA — 18/11/2026]** Toda compra com fornecedor CARGAJOI usa obrigatoriamente origem `FORNECEDOR_JOINVILLE` (exibida como FORNECEDOR JOI) e fornecedor de origem cadastrado `JOINVILLE`, inclusive sugestões restauradas. Destino permanece independente. Interface bloqueia esses campos. Commit `74f9444`; validação no navegador pendente.
 
 # CONTEXTO DO PROJETO — CASA DO ESTROGONOFE
