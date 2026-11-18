@@ -1,3 +1,9 @@
+
+### 18/11/2026 — Origem automática para todas as compras CARGAJOI
+- **Solicitação:** preencher FORNECEDOR JOI e Joinville sem seleção manual, inclusive em sugestões restauradas FLN.
+- **Solução:** defaults automáticos para qualquer item com fornecedor CARGAJOI, campos de origem bloqueados; preservação do destino. Arquivo `lista-semanal/index.html`, commit `74f9444`.
+- **Teste:** scripts sintaticamente válidos; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO** no navegador.
+
 # HISTÓRICO DE ALTERAÇÕES — CASA DO ESTROGONOFE
 Atualizado em 18/11/2026. Fonte: commits consultados no GitHub e relatos desta conversa. **Este registro não substitui os diffs e testes reais.**
 
