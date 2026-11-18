@@ -1,4 +1,8 @@
 
+## P2 — Validar alinhamento final da barra de navegação e cargas
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `1009a50`, `lista-semanal/index.html`. Confirmar que botões Carga estão à direita e na mesma linha de Compras/Cadastros/Movimentações, sem conteúdo rolando visível por trás; testar largura reduzida. A equipe JOI mantém botões próprios.
+
+
 ## P2 — Validar posição dos botões de carga
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `d02fe77`, `lista-semanal/index.html`. Usuário esclareceu por imagem que a sobreposição afeta Carga Jaraguá / Curitiba / Floripa, não os botões de categoria. Verificar desktop e mobile com menus fixos e durante rolagem. Não alterar checklists nem pedidos.
 
