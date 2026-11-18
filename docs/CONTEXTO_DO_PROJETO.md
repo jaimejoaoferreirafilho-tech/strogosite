@@ -1,4 +1,7 @@
 
+**[REGRA/CÓDIGO — 18/11/2026]** Compras sugeridas: cada categoria possui seletores gerais de origem CARGAJOI e fornecedor JOI. Eles atualizam somente os itens da categoria cujo fornecedor logístico é CARGAJOI, preservando edição individual. Selecionar fornecedor aplica origem FORNECEDOR_JOINVILLE; supermercado e estoque disponível dispensam fornecedor comercial. As escolhas permanecem no rascunho até confirmação da compra. Commit `cfc6782`; validação funcional pendente.
+
+
 **[CADASTROS — 18/11/2026]** VINAGRE (Mercearia) e PAPEL HIGIÊNICO (Descartáveis) integram a lista semanal de contagem de todas as unidades, ambos em UN, sem pedido de compra imediato. PIMENTA DO REINO foi ocultada das contagens JOI/JAR/FLN/CWB por `stock_count_visibility`, preservando cadastro e histórico; PIMENTA EM GRÃO permanece visível. Alteração direta no Supabase, sem mudança de código.
 
 
