@@ -8,7 +8,7 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Resultado efetivamente verificado**: validação sintática dos scripts e confirmação explícita do usuário: **“Ficou ótimo.”** Não há teste E2E automatizado comprovado.
 - **Deploy funcional conhecido antes da documentação**: Vercel `strogosite`, produção `dpl_D9sBfNJzYb7UbY6KjwvWDACEwkQ2`, estado `READY` consultado em 18/11/2026. **A documentação pode acionar novo deploy; verificar estado novamente.**
 - **Última alteração documental**: criação destes três arquivos em `docs/` em commits sucessivos; verificar os commits mais recentes do `main`.
-- **Próximo passo exato**: retomar a validação das listas consolidadas de supermercado e fornecedores (P1), ou a próxima melhoria solicitada pelo usuário; não repetir correções já revertidas.
+- **Próximo passo exato**: validar no navegador as melhorias de compra avulsa do commit `cf1874a` (data em lote e defaults CARGAJOI/JOI/Joinville), depois retomar a validação das listas consolidadas de supermercado e fornecedores; não repetir correções já revertidas.
 
 ## P0 — Preservação e integridade
 **Situação**: CONTÍNUA. Nas tentativas anteriores, uma mudança de `op/index.html` resultou em tela de acesso sem os dados visíveis; rollback restaurou funcionamento.
@@ -24,6 +24,13 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - **Tentativas**: ignorar por contagem (falhou em sugestões recuperadas), por pedido+produto, por ID de item e marcação direta no banco; o usuário ainda relatou falha visual antes da última verificação.
 - **Próxima ação**: nenhuma para este item; manter como teste de regressão ao modificar sugestões restauradas. Não extrapolar a confirmação para outros itens. **Não excluir registros diretamente do banco sem confirmação e autorização do usuário.**
 - **Prioridade**: alta, salvo nova orientação.
+
+
+## P1 — Validar data em lote e preenchimento automático na compra avulsa
+**Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**. Em 18/11/2026, commit `cf1874a` adicionou data única aplicável a todos os itens da loja e defaults para os seis produtos acabados (CARGAJOI / FORNECEDOR JOI / Joinville).
+- **Arquivo**: `lista-semanal/index.html`.
+- **Testes feitos**: sintaxe dos dois scripts validada. Não houve teste autenticado de UI nem confirmação do usuário.
+- **Próxima ação**: conferir deploy e abrir Compra avulsa, adicionar os seis produtos, verificar campos preenchidos e data aplicada em todos, testar confirmação sem alterar destino. Se houver falha, investigar antes de editar.
 
 ## P1 — Testar compras consolidadas de supermercado e fornecedores
 **Situação**: **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO**.
