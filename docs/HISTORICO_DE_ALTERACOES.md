@@ -3,7 +3,8 @@
 - **Solicitação:** após Jaraguá enviar contagem, tela continuava exibindo todos os itens preenchidos e botões desativados, causando impressão de tarefa não concluída.
 - **Solução:** ao carregar contagem com status `enviado`, ocultar área de preenchimento e mostrar confirmação visual; persistência após recarga por leitura do status. Não zerar dados armazenados.
 - **Arquivo:** `lista-semanal/index.html`; commit `5a2190a`.
-- **Teste:** scripts validados sintaticamente; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL** em login de loja.
+- **Teste:** scripts validados sintaticamente; - **Confirmação:** usuário informou “Aparentemente deu certo”; não houve teste independente de navegador.
+**VALIDADO PELO USUÁRIO — confirmação visual aparente em 18/11/2026** em login de loja.
 
 
 ### 18/11/2026 — Fixar navegação administrativa sem qualquer deslocamento ao rolar
