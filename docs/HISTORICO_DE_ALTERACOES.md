@@ -1,4 +1,11 @@
 
+### 18/11/2026 — Alinhar botões de carga à direita da subnavegação
+- **Solicitação:** colocar Carga Jaraguá/Curitiba/Floripa na mesma altura de Compras/Cadastros/Movimentações, à direita, e impedir conteúdo rolando visível por trás da barra congelada.
+- **Solução:** mover `#cargaButtons` para slot à direita de `#adminSubnav` quando administração; remover sticky independente e tornar o fundo da barra fixa opaco. Login de equipe mantém botões no local original.
+- **Arquivo:** `lista-semanal/index.html`; **commit:** `1009a50`.
+- **Testes:** sintaxe dos scripts validada; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL**.
+
+
 ### 18/11/2026 — Corrigir sobreposição dos botões de carga
 - **Solicitação:** botões Carga Jaraguá, Carga Curitiba e Carga Floripa estavam atrás da navegação fixa de Compras / Cadastros / Movimentações (print do usuário).
 - **Causa:** a barra de subnavegação fixa sobrepunha a linha de botões de carga durante a rolagem.
