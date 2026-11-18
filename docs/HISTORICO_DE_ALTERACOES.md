@@ -1,4 +1,11 @@
 
+### 18/11/2026 — Seletores de origem e fornecedor CARGAJOI por categoria
+- **Solicitação:** aplicar uma mesma origem CARGAJOI e fornecedor JOI a todos os itens de uma categoria de compras sugeridas.
+- **Solução:** adicionar dois seletores ao lado de fornecedor/data da categoria, sincronizando os campos individuais apenas dos itens CARGAJOI daquela categoria. Não grava no banco antes de confirmar compra.
+- **Arquivo:** `lista-semanal/index.html`; commit `cfc6782`.
+- **Teste:** scripts validados sintaticamente; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**.
+
+
 ### 18/11/2026 — Atualizar portfólio de contagem semanal
 - **Solicitação:** incluir VINAGRE e PAPEL HIGIÊNICO para equipes considerarem nas próximas contagens (UN), e retirar PIMENTA DO REINO porque já há PIMENTA EM GRÃO.
 - **Implementação:** inserir dois produtos ativos e ocultar PIMENTA DO REINO nas quatro unidades via `stock_count_visibility`; preservar cadastro e PIMENTA EM GRÃO. Sem gerar compras.
