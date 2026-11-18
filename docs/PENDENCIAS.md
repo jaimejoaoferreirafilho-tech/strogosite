@@ -1,4 +1,8 @@
 
+## P0 — Classificar itens atuais CARGAJOI antes de sair para compras
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO. Commits `16be314b` e `b15d95e`, `lista-semanal/index.html`. Consulta Supabase mostrou 5 itens supermercado e 28 itens FORNECEDOR_JOINVILLE com fornecedor genérico Joinville. Usuário precisa escolher supermercado ou fornecedor real na tabela de classificação dos pedidos atuais; não supor origem. Confirmar listas consolidadas, datas e quantidades; validar comportamento no navegador. Não modificar estoque/recebimentos/despacho.
+
+
 ## P1 — Validar lixeira em lote das compras sugeridas
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `626a68c`, `lista-semanal/index.html`. Testar selecionar itens de uma loja, clicar Excluir selecionados, confirmar desaparecimento e persistência após atualizar; testar itens restaurados de pedidos cancelados e relatório de falhas. Não alterar compras já confirmadas.
 
