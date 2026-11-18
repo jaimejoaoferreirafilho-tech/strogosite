@@ -1,4 +1,12 @@
 
+### 18/11/2026 — Corrigir contador e permanência de itens após classificar CARGAJOI
+- **Problema confirmado:** tabela exibia `allItems` em vez de `unclassified`, portanto itens salvos continuavam aparecendo; contagem visual não refletia os itens restantes.
+- **Banco consultado antes da correção:** 26 itens com fornecedor genérico Joinville, 6 supermercado, 1 com fornecedor real Mercado das Embalagens JOI.
+- **Correção:** renderizar somente `unclassified`, mostrar contagem correta, exigir fornecedor real quando origem for fornecedor e indicar conclusão quando não houver pendências.
+- **Arquivo:** `lista-semanal/index.html`; commit `0d202cc`.
+- **Validação:** scripts sintaticamente válidos; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**. Nenhum pedido foi alterado diretamente.
+
+
 ### 18/11/2026 — Separar aquisição de logística CARGAJOI na lista atual
 - **Solicitação:** usuário precisa sair para comprar; diferenciar supermercado e fornecedores sem escolher qual supermercado, preservando separação de cargas.
 - **Verificado no Supabase:** 33 itens CARGAJOI previstos; 5 SUPERMERCADO, 28 FORNECEDOR_JOINVILLE com fornecedor genérico Joinville.
