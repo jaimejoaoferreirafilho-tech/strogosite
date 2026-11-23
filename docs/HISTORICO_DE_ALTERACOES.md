@@ -1,4 +1,12 @@
 
+### 23/11/2026 — COCA ZERO 350ML de Curitiba permanece nas sugestões após compra
+- **Solicitação:** item continuava em Compras sugeridas apesar dos demais terem ido para Recebimento.
+- **Banco confirmado:** pedido previsto Curitiba, COCA ZERO 350ML, 84 UN, fornecedor Coca Cola (FEMSA), previsão 24/11/2026; produto já vinculado à contagem enviada.
+- **Correção:** filtro de sugestões passou a excluir qualquer produto da unidade que já tenha item em pedido ativo, além da verificação por contagem. Evita sugestão duplicada.
+- **Arquivo:** `lista-semanal/index.html`; commit `5be53f3`.
+- **Teste:** sintaxe JavaScript válida; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO NA INTERFACE**. Não criou ou alterou pedido no banco.
+
+
 ### 18/11/2026 — Preservar fornecedor individual após aplicação por categoria
 - **Solicitação:** seletor geral de fornecedor JOI não pode eliminar a possibilidade de escolher outro fornecedor por produto.
 - **Causa no código:** eventos `onchange` individuais eram sobrescritos após a renderização; a aplicação por categoria também alterava apenas valores visuais, sem atualizar a visibilidade do seletor individual.
