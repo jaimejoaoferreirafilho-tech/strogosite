@@ -1,4 +1,12 @@
 
+### 23/11/2026 — Persistência de rascunhos de compras sugeridas
+- **Problema:** alterações de fornecedores, datas e quantidades desapareciam ao navegar para outra tela ou recarregar.
+- **Causa:** `suggestedDraft` era mantido apenas na memória da página e reconstruído a partir de contagens.
+- **Solução:** salvar/recuperar rascunhos por item no `localStorage`, preservar alterações em recarregamentos e remover rascunhos de itens confirmados.
+- **Arquivo:** `lista-semanal/index.html`; commits `51ee90d` e `ea7ae118` (ajuste de inicialização para não apagar rascunho existente).
+- **Validação:** sintaxe JavaScript aprovada; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**. Limitação: persistência local por navegador, não entre dispositivos.
+
+
 ### 23/11/2026 — COCA ZERO 350ML de Curitiba permanece nas sugestões após compra
 - **Solicitação:** item continuava em Compras sugeridas apesar dos demais terem ido para Recebimento.
 - **Banco confirmado:** pedido previsto Curitiba, COCA ZERO 350ML, 84 UN, fornecedor Coca Cola (FEMSA), previsão 24/11/2026; produto já vinculado à contagem enviada.
