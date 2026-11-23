@@ -1,4 +1,8 @@
 
+## P1 — Confirmar retirada de COCA ZERO 350ML das sugestões de Curitiba
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `5be53f3`. Pedido de 84 UN já existe, previsto para 24/11/2026 com Coca Cola (FEMSA). Filtro de compras sugeridas agora verifica pedidos ativos da loja para evitar duplicação. Conferir após recarregar se item some da sugestão e permanece no Recebimento; não enviar compra novamente.
+
+
 ## P1 — Validar fornecedor individual após seleção geral da categoria
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `2e23415`, `lista-semanal/index.html`. Testar fornecedor geral, depois trocar fornecedor de um único item, confirmando que os outros mantêm o fornecedor geral e que a escolha individual persiste até confirmação da compra.
 
