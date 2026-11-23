@@ -1,4 +1,8 @@
 
+## P1 — Validar marcação de compras em lote
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `82bff39`, `lista-semanal/index.html`. Selecionar alguns itens de supermercado/fornecedores, clicar `Já comprei (N)` e confirmar uma vez. Verificar remoção somente dos selecionados, preservação dos demais e continuidade das previsões de recebimento/cargas. Conferir mensagens de erro e atualização do contador.
+
+
 ## P1 — Validar persistência dos rascunhos de compras
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `ea7ae118`, `lista-semanal/index.html`. Testar fornecedor, data, quantidade, origem e fornecedor individual CARGAJOI; navegar para Recebimento, voltar, recarregar e conferir. Testar confirmação de compra e retirada dos itens confirmados do rascunho. **Limitação conhecida:** `localStorage` não sincroniza entre navegadores ou dispositivos; avaliar persistência no Supabase se necessária.
 
