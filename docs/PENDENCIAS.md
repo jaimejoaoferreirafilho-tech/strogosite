@@ -1,4 +1,8 @@
 
+## P1 — Validar persistência dos rascunhos de compras
+**Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `ea7ae118`, `lista-semanal/index.html`. Testar fornecedor, data, quantidade, origem e fornecedor individual CARGAJOI; navegar para Recebimento, voltar, recarregar e conferir. Testar confirmação de compra e retirada dos itens confirmados do rascunho. **Limitação conhecida:** `localStorage` não sincroniza entre navegadores ou dispositivos; avaliar persistência no Supabase se necessária.
+
+
 ## P1 — Confirmar retirada de COCA ZERO 350ML das sugestões de Curitiba
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO VISUAL. Commit `5be53f3`. Pedido de 84 UN já existe, previsto para 24/11/2026 com Coca Cola (FEMSA). Filtro de compras sugeridas agora verifica pedidos ativos da loja para evitar duplicação. Conferir após recarregar se item some da sugestão e permanece no Recebimento; não enviar compra novamente.
 
