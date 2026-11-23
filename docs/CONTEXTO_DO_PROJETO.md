@@ -1,4 +1,7 @@
 
+**[CÓDIGO — 23/11/2026]** Na área Compras em Joinville, produtos das listas de supermercado e fornecedores podem ser selecionados por caixas individuais e confirmados em grupo com botão `Já comprei (N)`, com `Selecionar todos` e `Desmarcar todos`. A confirmação única usa a RPC existente `stock_local_purchase_mark` com IDs de todos os itens selecionados, preservando previsão de recebimento e separação de carga. Commit `82bff39`; validação funcional pendente.
+
+
 **[CÓDIGO — 23/11/2026]** A tela de compras sugeridas preserva rascunhos de fornecedores, datas, quantidades, seleção e origem/fornecedor CARGAJOI no `localStorage` do navegador, com chave `cde_purchase_drafts_v1` e identificação por loja/contagem/item/produto. O salvamento ocorre em alterações de campos, saída da página e antes de reconstruir a lista. Não sincroniza entre dispositivos. Após confirmação de compra, os itens confirmados são removidos do rascunho. Commit `ea7ae118`; teste funcional pendente.
 
 
