@@ -1,4 +1,11 @@
 
+### 23/11/2026 — Confirmar itens comprados em grupo
+- **Problema:** cada botão `Já comprei` exigia confirmação individual, tornando o processo demorado.
+- **Implementação:** substituir botões por checkboxes, acrescentar selecionar/desmarcar todos, contador e botão de confirmação em lote; enviar todos os IDs selecionados à RPC existente numa única operação.
+- **Arquivo:** `lista-semanal/index.html`; commit `82bff39`.
+- **Teste:** sintaxe JavaScript válida; **IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL**. Nenhum registro de compra foi alterado durante a implementação.
+
+
 ### 23/11/2026 — Persistência de rascunhos de compras sugeridas
 - **Problema:** alterações de fornecedores, datas e quantidades desapareciam ao navegar para outra tela ou recarregar.
 - **Causa:** `suggestedDraft` era mantido apenas na memória da página e reconstruído a partir de contagens.
