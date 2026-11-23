@@ -1,4 +1,7 @@
 
+**[CÓDIGO — 23/11/2026]** A tela de compras sugeridas preserva rascunhos de fornecedores, datas, quantidades, seleção e origem/fornecedor CARGAJOI no `localStorage` do navegador, com chave `cde_purchase_drafts_v1` e identificação por loja/contagem/item/produto. O salvamento ocorre em alterações de campos, saída da página e antes de reconstruir a lista. Não sincroniza entre dispositivos. Após confirmação de compra, os itens confirmados são removidos do rascunho. Commit `ea7ae118`; teste funcional pendente.
+
+
 **[REGRA/CÓDIGO — 18/11/2026]** Compras sugeridas: cada categoria possui seletores gerais de origem CARGAJOI e fornecedor JOI. Eles atualizam somente os itens da categoria cujo fornecedor logístico é CARGAJOI, preservando edição individual. Selecionar fornecedor aplica origem FORNECEDOR_JOINVILLE; supermercado e estoque disponível dispensam fornecedor comercial. As escolhas permanecem no rascunho até confirmação da compra. Commit `cfc6782`; validação funcional pendente.
 
 
