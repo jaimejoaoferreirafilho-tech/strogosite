@@ -1,4 +1,7 @@
 
+24/11/2026 — Correção crítica Supabase: migration secure_local_purchase_and_restored_suggestion_tables aplicada com sucesso. Duas tabelas anteriormente abertas protegidas; consulta pós-migração confirma RLS true e permissões anon SELECT/INSERT/UPDATE/DELETE false. Security Advisor sem ERROR. Nenhum dado excluído. Validação funcional de compras pendente.
+
+
 24/11/2026 — Histórico de contagens enviadas: adicionada seção administrativa independente de compras em lista-semanal/index.html, commit c0be52e. Sintaxe dos scripts validada. IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Sem alteração de dados ou banco.
 
 
