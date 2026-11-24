@@ -1,4 +1,7 @@
 
+24/11/2026 — Segurança: RLS habilitado em stock_local_purchase_checks e stock_restored_suggestion_ignored; acesso direto anon/authenticated/public revogado; cinco RPCs administrativas mantidas para authenticated, com checagem interna de admin. Não desabilitar RLS para corrigir erros de interface.
+
+
 Histórico de contagens: seção administrativa separada, somente leitura, consulta stock_counts enviados e stock_count_items, filtros loja/data, paginação e detalhe incluindo zeros. Nomes/unidades/categorias vêm do cadastro atual, não de snapshot histórico.
 
 
