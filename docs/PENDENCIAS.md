@@ -1,4 +1,7 @@
 
+24/11/2026 — Segurança: verificar funcionamento de Já comprei e sugestões ignoradas após proteção RLS. Auditar 11 RPCs SECURITY DEFINER acessíveis a anon, 39 a authenticated (podem ser intencionais), proteção de senhas vazadas desabilitada e logs de acesso. Dez avisos INFO RLS sem políticas, incluindo tabelas internas protegidas via RPC; não criar políticas permissivas automaticamente.
+
+
 24/11/2026 — Validar histórico de contagens (c0be52e): abrir seção admin, filtrar loja/data, consultar contagem com compras já confirmadas, conferir zeros e paginação. Aguardar validação visual e deploy. Nomes/unidades são do cadastro atual.
 
 
