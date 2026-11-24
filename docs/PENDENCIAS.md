@@ -1,4 +1,7 @@
 
+24/11/2026 — Validar histórico de contagens (c0be52e): abrir seção admin, filtrar loja/data, consultar contagem com compras já confirmadas, conferir zeros e paginação. Aguardar validação visual e deploy. Nomes/unidades são do cadastro atual.
+
+
 ## P1 — Validar marcação de compras em lote
 **Estado:** IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Commit `82bff39`, `lista-semanal/index.html`. Selecionar alguns itens de supermercado/fornecedores, clicar `Já comprei (N)` e confirmar uma vez. Verificar remoção somente dos selecionados, preservação dos demais e continuidade das previsões de recebimento/cargas. Conferir mensagens de erro e atualização do contador.
 
