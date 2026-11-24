@@ -1,4 +1,7 @@
 
+24/11/2026 — Histórico de contagens enviadas: adicionada seção administrativa independente de compras em lista-semanal/index.html, commit c0be52e. Sintaxe dos scripts validada. IMPLEMENTADO — AGUARDANDO VALIDAÇÃO FUNCIONAL. Sem alteração de dados ou banco.
+
+
 ### 23/11/2026 — Confirmar itens comprados em grupo
 - **Problema:** cada botão `Já comprei` exigia confirmação individual, tornando o processo demorado.
 - **Implementação:** substituir botões por checkboxes, acrescentar selecionar/desmarcar todos, contador e botão de confirmação em lote; enviar todos os IDs selecionados à RPC existente numa única operação.
