@@ -1,4 +1,7 @@
 
+Histórico de contagens: seção administrativa separada, somente leitura, consulta stock_counts enviados e stock_count_items, filtros loja/data, paginação e detalhe incluindo zeros. Nomes/unidades/categorias vêm do cadastro atual, não de snapshot histórico.
+
+
 **[CÓDIGO — 23/11/2026]** Na área Compras em Joinville, produtos das listas de supermercado e fornecedores podem ser selecionados por caixas individuais e confirmados em grupo com botão `Já comprei (N)`, com `Selecionar todos` e `Desmarcar todos`. A confirmação única usa a RPC existente `stock_local_purchase_mark` com IDs de todos os itens selecionados, preservando previsão de recebimento e separação de carga. Commit `82bff39`; validação funcional pendente.
 
 
