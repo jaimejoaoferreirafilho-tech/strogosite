@@ -175,3 +175,7 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 - Toda decisão de regra: atualizar `CONTEXTO_DO_PROJETO.md`.
 - Ao final de sessão: atualizar última tarefa, último commit funcional, estado do deploy, resultado real e próximo passo.
 - **Nunca marcar como concluído por commit ou deploy apenas.** Usar `IMPLEMENTADO — AGUARDANDO VALIDAÇÃO` quando necessário.
+
+
+### 25/11/2026 — Sugestões recorrentes de compra
+Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não bloqueiam novas sugestões de contagens; pedidos previstos bloqueiam duplicidade por unidade/produto; pedidos já vinculados à mesma contagem e descartes continuam protegidos. Recuperação de cancelados mantém filtro histórico anterior. Vercel READY produção confirmado; teste visual autenticado pendente. CREME CULINÁRIO JOI: 5 caixas, mínimo 15; nova compra avulsa de 20 caixas prevista para 26/11 já existente, sem duplicar. Conferir sugestões recuperadas antes de confirmar compras. Próximas etapas: navegação e visualização das listas, automação de compras e depois adoção das OPs.
