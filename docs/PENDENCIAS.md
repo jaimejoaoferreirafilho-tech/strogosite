@@ -179,3 +179,6 @@ Atualizado em 18/11/2026. Este é o ponto de retomada obrigatório para novos ch
 
 ### 25/11/2026 — Sugestões recorrentes de compra
 Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não bloqueiam novas sugestões de contagens; pedidos previstos bloqueiam duplicidade por unidade/produto; pedidos já vinculados à mesma contagem e descartes continuam protegidos. Recuperação de cancelados mantém filtro histórico anterior. Vercel READY produção confirmado; teste visual autenticado pendente. CREME CULINÁRIO JOI: 5 caixas, mínimo 15; nova compra avulsa de 20 caixas prevista para 26/11 já existente, sem duplicar. Conferir sugestões recuperadas antes de confirmar compras. Próximas etapas: navegação e visualização das listas, automação de compras e depois adoção das OPs.
+
+
+25/11/2026: por solicitação da administração, ciclo até 23/11 encerrado para sugestões (sem apagar contagens). A partir de 26/11, somente última contagem enviada por unidade, com mínimo do respectivo dia. Cancelados vinculados a contagens antigas não reaparecem. Commit f75b118. Validação visual pendente.
