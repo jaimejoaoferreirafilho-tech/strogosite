@@ -136,3 +136,7 @@ Outros caminhos do repositório devem ser inventariados antes de alterações; n
 
 ## Serviços e pontos ainda não recuperados
 **[A VERIFICAR]** Inventário completo do repositório e demais funções; implantação exata do commit pós-documentação; implementação de Resend/Edge Functions; testes automatizados e observabilidade; matriz completa de RLS; regras atuais de todas as fichas técnicas; validação real do fluxo de `Já comprei`, listas de fornecedores e exclusão de sugestões recuperadas. Consultar `PENDENCIAS.md` para prioridade e próximo passo.
+
+
+### 25/11/2026 — Sugestões recorrentes de compra
+Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não bloqueiam novas sugestões de contagens; pedidos previstos bloqueiam duplicidade por unidade/produto; pedidos já vinculados à mesma contagem e descartes continuam protegidos. Recuperação de cancelados mantém filtro histórico anterior. Vercel READY produção confirmado; teste visual autenticado pendente. CREME CULINÁRIO JOI: 5 caixas, mínimo 15; nova compra avulsa de 20 caixas prevista para 26/11 já existente, sem duplicar. Conferir sugestões recuperadas antes de confirmar compras. Próximas etapas: navegação e visualização das listas, automação de compras e depois adoção das OPs.
