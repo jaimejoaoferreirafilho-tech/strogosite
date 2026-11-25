@@ -303,3 +303,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026: removida categoria COMPRA EXCLUSIVA ADMINISTRAÇÃO, nove produtos reclassificados em Proteínas, Frios e Hortifruti, mantendo IDs e manual_purchase_only. Cadastro avulso exige categoria real (3327611). Estoques administrativos publicados (0173d1b), despacho CARGAJOI gera saída, recebimento exige despacho; testes e integração de entradas externas em JOI pendentes.
+
+
+25/11/2026 — Desativados BATATA PALITO ADM, MUSSARELA ADM, COXÃO MOLE IN NATURA e MIGNON IN NATURA, sem vínculos com fichas técnicas ou pedidos pendentes; históricos preservados. ÁGUA mantida por vínculo com ARROZ FORNO, aguardando decisão administrativa.
