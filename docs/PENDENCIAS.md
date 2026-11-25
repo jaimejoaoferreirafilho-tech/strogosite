@@ -185,3 +185,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026 — Compras: navegação separada por ação (2ad11fa), CARGAJOI interno aceito no RPC e fora das listas de compra; checklist independente da compra. Sugestões futuras recuperam último fornecedor não cancelado por unidade/produto, origem e fornecedor CARGAJOI; rascunhos manuais prevalecem, fornecedor histórico deve continuar habilitado. Histórico paginado (cc0a46d). Pendente validação visual e funcional, indicação item não recebido no checklist e unificação pedidos diretos/Joinville.
+
+
+25/11/2026 — Importador Analytics agregado publicado (bed83e36, Vercel READY produção). Quatro CSVs: vendas 15 colunas, controle, cancelamentos e conciliação de tamanhos. Validação local e pendências por produto-dia; chave loja/produto/opção. Sem persistência ou baixa. Pendente teste autenticado com ZIP extraído, cobertura completa, mapeamento e composição, persistência admin com RLS, cancelamentos complementares, idempotência e simulação antes do inventário. Não agendar Toqan ainda.
