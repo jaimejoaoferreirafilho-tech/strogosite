@@ -300,3 +300,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026 — Compras: navegação separada por ação (2ad11fa), CARGAJOI interno aceito no RPC e fora das listas de compra; checklist independente da compra. Sugestões futuras recuperam último fornecedor não cancelado por unidade/produto, origem e fornecedor CARGAJOI; rascunhos manuais prevalecem, fornecedor histórico deve continuar habilitado. Histórico paginado (cc0a46d). Pendente validação visual e funcional, indicação item não recebido no checklist e unificação pedidos diretos/Joinville.
+
+
+25/11/2026: removida categoria COMPRA EXCLUSIVA ADMINISTRAÇÃO, nove produtos reclassificados em Proteínas, Frios e Hortifruti, mantendo IDs e manual_purchase_only. Cadastro avulso exige categoria real (3327611). Estoques administrativos publicados (0173d1b), despacho CARGAJOI gera saída, recebimento exige despacho; testes e integração de entradas externas em JOI pendentes.
