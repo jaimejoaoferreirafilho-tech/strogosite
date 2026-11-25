@@ -188,3 +188,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026 — Importador Analytics agregado publicado (bed83e36, Vercel READY produção). Quatro CSVs: vendas 15 colunas, controle, cancelamentos e conciliação de tamanhos. Validação local e pendências por produto-dia; chave loja/produto/opção. Sem persistência ou baixa. Pendente teste autenticado com ZIP extraído, cobertura completa, mapeamento e composição, persistência admin com RLS, cancelamentos complementares, idempotência e simulação antes do inventário. Não agendar Toqan ainda.
+
+
+25/11/2026 — Tolerâncias aprovadas e cadastradas no Supabase: acabados e bebidas 0/0; proteínas 2/5; frios 3/7; mercearia 3/10; hortifruti e descartáveis 5/10; limpeza 5/15. Tabelas stock_count_category_tolerances e stock_count_product_tolerances com RLS admin. RPC stock_count_audit_preview calcula saldo registrado até envio da contagem, sempre PENDENTE_BASE_E_VENDAS até inventário e cobertura temporal validada; não é conciliação definitiva, unidades ainda precisam validação. Sem movimentações. Pendente UI, histórico imutável, classificação final, ZIP e composição de venda.
