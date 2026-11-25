@@ -182,3 +182,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026: por solicitação da administração, ciclo até 23/11 encerrado para sugestões (sem apagar contagens). A partir de 26/11, somente última contagem enviada por unidade, com mínimo do respectivo dia. Cancelados vinculados a contagens antigas não reaparecem. Commit f75b118. Validação visual pendente.
+
+
+25/11/2026 — Compras: navegação separada por ação (2ad11fa), CARGAJOI interno aceito no RPC e fora das listas de compra; checklist independente da compra. Sugestões futuras recuperam último fornecedor não cancelado por unidade/produto, origem e fornecedor CARGAJOI; rascunhos manuais prevalecem, fornecedor histórico deve continuar habilitado. Histórico paginado (cc0a46d). Pendente validação visual e funcional, indicação item não recebido no checklist e unificação pedidos diretos/Joinville.
