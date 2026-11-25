@@ -306,3 +306,6 @@ Corrigido em `lista-semanal/index.html` (commit 2898c2e): pedidos recebidos não
 
 
 25/11/2026 — Desativados BATATA PALITO ADM, MUSSARELA ADM, COXÃO MOLE IN NATURA e MIGNON IN NATURA, sem vínculos com fichas técnicas ou pedidos pendentes; históricos preservados. ÁGUA mantida por vínculo com ARROZ FORNO, aguardando decisão administrativa.
+
+
+25/11/2026 — ÁGUA preservada na ficha ARROZ FORNO, categoria sem estoque excluída do RPC de saldos. Importar vendas iFood (58fb8ec): menu admin, CSV UTF-8 ponto e vírgula, cabeçalho de 13 campos, validação local de datas, IDs, status, duplicidade e vínculo de complementos, modelo CSV. Não persiste vendas nem movimenta estoque. Pendente amostra Toqan, mapeamento SKU/composições, persistência idempotente, tratamento de cancelamento e testes.
